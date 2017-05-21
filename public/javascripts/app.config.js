@@ -15,6 +15,11 @@
         url: '/',
         component: 'waMain',
       })
+      .state({
+        name: 'sourceShow',
+        url: '/sources/:id',
+        component: 'waSource'
+      })
   }
 
 }());

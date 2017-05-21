@@ -1,7 +1,5 @@
-<h1>Well-Actually</h1>
-
 <div class="container">
-  <div class="row" ng-repeat="source in $ctrl.sources">
+  <div class="row">
     <div class="col-md-12">
 
       <div class="well">
@@ -10,8 +8,7 @@
         </div>
         <div class="media-body">
           <h4 class="media-heading">
-            <a ui-sref="sourceShow({ id: source.id })">{{source.title}}</a>
-
+            <a ui-sref="#">{{$ctrl.source.title}}</a>
             |
             <a><i class="glyphicon glyphicon-arrow-up"></i></a>
             <a><i class="glyphicon glyphicon-arrow-down"></i></a>
@@ -21,7 +18,7 @@
             Some Author
           </div>
           <p>
-            {{source.abstract}}
+            {{$ctrl.source.abstract}}
           </p>
           <div>
             Some time ago |
