@@ -17,16 +17,18 @@ class SourcesController < ApplicationController
   def create
     @source = Source.new(source_params)
 
+    puts source_params
+
     if @source.save
-      redirect_to @source
+      render json: @source, status: :created, location: @source
     else
-      render 'new'
+      render json: @source.errors, status: :unprocessable_entity
     end
   end
 
   private
     def source_params
-      params.require(:source).permit(:user_id, :title, :link, :journal, :abstract, :notes, :wins)
+      params.permit(:title, :link, :journal, :abstract, :notes)
     end
 end
 

@@ -11,6 +11,19 @@
             vm.sources = response.data;
           })
         }
+
+        vm.toggleForm = function() {
+          vm.showForm = !vm.showForm;
+        }
+
+        vm.createSource = function() {
+          $http.post('/sources', vm.newPost).then((response) => {
+            console.log(response);
+          })
+          .catch(err => {
+            console.log(err);
+          })
+        }
       },
       templateUrl: 'views/waMain.html'
     })
