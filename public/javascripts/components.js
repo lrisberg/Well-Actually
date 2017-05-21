@@ -6,8 +6,6 @@
       controller: function($http) {
         const vm = this;
 
-        vm.greeting = 'hello';
-
         vm.$onInit = function() {
           $http.get('/sources').then((response) => {
             console.log(response);
