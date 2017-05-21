@@ -20,6 +20,8 @@
           $http.post('/sources', vm.newSource).then((response) => {
             vm.sources.push(response.data);
           })
+          vm.showForm = false;
+          delete vm.newSource;
         }
       },
       templateUrl: 'views/waMain.html'
