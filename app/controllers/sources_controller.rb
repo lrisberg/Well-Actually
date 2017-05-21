@@ -28,13 +28,14 @@ class SourcesController < ApplicationController
     end
   end
 
+  # this is not returning the right response. wtf?
   def update
     @source = Source.find(params[:id])
 
     if @source.update(source_params)
-      redirect_to @source
+      head :ok
     else
-      render 'edit'
+      render json: @source.errors, status: :unprocessable_entity
     end
   end
 

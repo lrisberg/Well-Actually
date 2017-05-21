@@ -42,12 +42,18 @@
     })
 
     .component('waEdit', {
-      controller: function($http, $stateParams) {
+      controller: function($http, $stateParams, $state) {
         const vm = this;
 
         vm.$onInit = function() {
           $http.get(`/sources/${$stateParams.id}`).then((response) => {
             vm.editSource = response.data;
+          })
+        }
+
+        vm.updateSource = function() {
+          $http.patch(`/sources/${$stateParams.id}`, vm.editSource).then((response) => {
+            $state.go('dashboard')
           })
         }
       },
