@@ -42,11 +42,13 @@
     })
 
     .component('waEdit', {
-      controller: function($http) {
+      controller: function($http, $stateParams) {
         const vm = this;
 
         vm.$onInit = function() {
-          console.log('hello from waEdit');
+          $http.get(`/sources/${$stateParams.id}`).then((response) => {
+            vm.editSource = response.data;
+          })
         }
       },
 
