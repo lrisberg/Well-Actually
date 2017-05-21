@@ -18,7 +18,7 @@
 <div class="container">
 
   <div class="pull-right">
-    <p><a class="btn btn-info" ng-click="$ctrl.toggleForm()">New Post</a></p>
+    <p><a class="btn btn-info" ng-click="$ctrl.toggleForm()">New Source</a></p>
   </div>
 
   <div ng-if="$ctrl.showForm" class="row">
@@ -64,40 +64,15 @@
         </div>
         <div class="media-body">
           <h4 class="media-heading">
-            <a ui-sref="editSource({ id: source.id })">{{source.title}}</a>
+            <a ui-sref="showSource({ id: source.id })">{{source.title}}</a>
 
             |
             <a ui-sref="editSource({ id: source.id })">edit</a>
           </h4>
-          <div class="text-right">
-            Some Author
-          </div>
+          <a href="{{source.link}}">Go to the Source!</a>
           <p>
             {{source.abstract}}
           </p>
-          <div>
-            Some time ago |
-            <i class="glyphicon glyphicon-comment"></i>
-            <a>
-              Some comments
-            </a>
-          </div>
-          <div class="row">
-            <div class="col-md-offset-1">
-              <hr>
-              <p>
-                Comment text
-              </p>
-              <form class="form-inline">
-                <div class="form-group">
-                  <input class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="submit" class="btn btn-primary">
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
 
