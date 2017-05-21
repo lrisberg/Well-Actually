@@ -64,12 +64,10 @@
         </div>
         <div class="media-body">
           <h4 class="media-heading">
-            <a ui-sref="sourceShow({ id: source.id })">{{source.title}}</a>
+            <a ui-sref="editSource({ id: source.id })">{{source.title}}</a>
 
             |
-            <a><i class="glyphicon glyphicon-arrow-up"></i></a>
-            <a><i class="glyphicon glyphicon-arrow-down"></i></a>
-            10
+            <a ui-sref="editSource({ id: source.id })">edit</a>
           </h4>
           <div class="text-right">
             Some Author

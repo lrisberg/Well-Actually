@@ -14,6 +14,10 @@ class SourcesController < ApplicationController
     @source = Source.new
   end
 
+  def edit
+    @source = Source.find(params[:id])
+  end
+
   def create
     @source = Source.new(source_params)
 
@@ -21,6 +25,16 @@ class SourcesController < ApplicationController
       render json: @source, status: :created, location: @source
     else
       render json: @source.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @source = Source.find(params[:id])
+
+    if @source.update(source_params)
+      redirect_to @source
+    else
+      render 'edit'
     end
   end
 

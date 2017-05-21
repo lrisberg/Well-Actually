@@ -40,4 +40,16 @@
 
       templateUrl: 'views/waSource.html'
     })
+
+    .component('waEdit', {
+      controller: function($http) {
+        const vm = this;
+
+        vm.$onInit = function() {
+          console.log('hello from waEdit');
+        }
+      },
+
+      templateUrl: 'views/waEdit.html'
+    })
 })();
