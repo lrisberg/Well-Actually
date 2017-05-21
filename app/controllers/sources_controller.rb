@@ -1,10 +1,12 @@
 class SourcesController < ApplicationController
   def index
     @sources = Source.all
+    render json: @sources
   end
 
   def show
     @source = Source.find(params[:id])
+    render json: @sources
   end
 
   # explicitly saying the sources/new route exists
