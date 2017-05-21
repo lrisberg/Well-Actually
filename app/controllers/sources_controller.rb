@@ -39,6 +39,12 @@ class SourcesController < ApplicationController
     end
   end
 
+  def destroy
+    @source = Source.find(params[:id])
+    @source.destroy
+  end
+
+
   private
     def source_params
       params.require(:source).permit(:id, :title, :link, :journal, :abstract, :notes)

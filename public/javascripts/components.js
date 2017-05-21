@@ -56,6 +56,12 @@
             $state.go('dashboard')
           })
         }
+
+        vm.deleteSource = function() {
+          $http.delete(`/sources/${$stateParams.id}`).then((response) => {
+            $state.go('dashboard')
+          })
+        }
       },
 
       templateUrl: 'views/waEdit.html'
