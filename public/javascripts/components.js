@@ -17,11 +17,8 @@
         }
 
         vm.createSource = function() {
-          $http.post('/sources', vm.newPost).then((response) => {
-            console.log(response);
-          })
-          .catch(err => {
-            console.log(err);
+          $http.post('/sources', vm.newSource).then((response) => {
+            vm.sources.push(response.data);
           })
         }
       },

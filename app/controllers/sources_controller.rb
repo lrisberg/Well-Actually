@@ -28,7 +28,7 @@ class SourcesController < ApplicationController
 
   private
     def source_params
-      params.permit(:title, :link, :journal, :abstract, :notes)
+      params.permit(:id, :title, :link, :journal, :abstract, :notes)
     end
 end
 
