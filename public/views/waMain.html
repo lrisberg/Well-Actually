@@ -7,27 +7,6 @@
   <!-- sources and showForm variables are bound from the Main controller -->
   <wa-new-source-form sources="$ctrl.sources" show-form="$ctrl.showForm" ng-if="$ctrl.showForm"></wa-new-source-form>
 
-  <div class="row" ng-repeat="source in $ctrl.sources">
-    <div class="col-md-12">
-
-      <div class="well">
-        <div class="media-left">
-          <img class="media-object">
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">
-            <a ui-sref="showSource({ id: source.id })">{{source.title}}</a>
-
-            |
-            <a ui-sref="editSource({ id: source.id })">edit</a>
-          </h4>
-          <a href="{{source.link}}">Go to the Source!</a>
-          <p>
-            {{source.abstract}}
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
+  <!-- remember when binding to pass in the variables/data you're passing to a new controller -->
+  <wa-source ng-repeat="source in $ctrl.sources" source="source"></wa-source>
 </div>

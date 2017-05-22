@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="well">
+        <div class="media-left">
+          <img class="media-object">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">
+            <a ui-sref="#">{{$ctrl.source.title}}</a>
+            |
+            <a ui-sref="editSource({ id: $ctrl.source.id })">edit</a>
+          </h4>
+          <a href="{{$ctrl.source.link}}">Go to the Source!</a>
+          <p>
+            {{$ctrl.source.abstract}}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

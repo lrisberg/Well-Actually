@@ -18,7 +18,7 @@
       .state({
         name: 'showSource',
         url: '/sources/:id',
-        component: 'waSource'
+        component: 'waShowSource'
       })
       .state({
         name: 'editSource',
