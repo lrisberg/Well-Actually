@@ -1,12 +1,12 @@
 class Api::SourcesController < ApplicationController
   def index
-    @sources = Source.all
-    render json: @sources
-  end
-
-  def show
-    @source = Source.find(params[:id])
-    render json: @source
+    @sources = if params[:tag]
+      Source.tagged_with(params[:tag])
+      render json: @sources
+    else
+      @sources = Source.all
+      render json: @sources
+    end
   end
 
   # explicitly saying the sources/new route exists
@@ -14,8 +14,9 @@ class Api::SourcesController < ApplicationController
     @source = Source.new
   end
 
-  def edit
+  def show
     @source = Source.find(params[:id])
+    render json: @source
   end
 
   def create
@@ -26,6 +27,10 @@ class Api::SourcesController < ApplicationController
     else
       render json: @source.errors, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @source = Source.find(params[:id])
   end
 
   def update
