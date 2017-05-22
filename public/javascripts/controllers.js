@@ -19,7 +19,6 @@
       vm.$onInit = function() {
         $http.get('/api/sources').then((response) => {
           vm.sources = response.data;
-          console.log(vm.sources);
         })
       }
 
