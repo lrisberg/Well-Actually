@@ -2,16 +2,24 @@
 
   angular
     .module('app')
-    .component('waEdit', {
-      controller: 'WaEditController',
-      controllerAs: '$ctrl',
-      templateUrl: 'views/waEdit.html'
-    })
-
     .component('waNav', {
       controller: 'WaNavController',
       controllerAs: '$ctrl',
       templateUrl: 'views/waNav.html'
+    })
+
+    .component('waMain', {
+      controller: 'WaMainController',
+      controllerAs: '$ctrl',
+      templateUrl: 'views/waMain.html'
+    })
+    .component('waSource', {
+      bindings: {
+        'source': '='
+      },
+      controller: 'WaSourceController',
+      controllerAs: '$ctrl',
+      templateUrl: 'views/waSource.html'
     })
     .component('waNewSourceForm', {
       bindings: {
@@ -22,23 +30,16 @@
       controllerAs: '$ctrl',
       templateUrl: 'views/waNewSourceForm.html'
     })
-    .component('waSource', {
-      bindings: {
-        'source': '='
-      },
-      controller: 'WaSourceController',
-      controllerAs: '$ctrl',
-      templateUrl: 'views/waSource.html'
-    })
-    .component('waMain', {
-      controller: 'WaMainController',
-      controllerAs: '$ctrl',
-      templateUrl: 'views/waMain.html'
-    })
     .component('waShowSource', {
       controller: 'WaShowSourceController',
       controllerAs: '$ctrl',
       templateUrl: 'views/waShowSource.html'
     })
+    .component('waEditSource', {
+      controller: 'WaEditSourceController',
+      controllerAs: '$ctrl',
+      templateUrl: 'views/waEdit.html'
+    })
+
 
 })();

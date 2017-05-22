@@ -7,7 +7,7 @@
       .controller('WaSourceController', WaSourceController)
       .controller('WaNewSourceFormController', WaNewSourceFormController)
       .controller('WaShowSourceController', WaShowSourceController)
-      .controller('WaEditController', WaEditController)
+      .controller('WaEditSourceController', WaEditSourceController)
 
     function WaNavController() {
 
@@ -54,7 +54,7 @@
       }
     }
 
-    function WaEditController($http, $stateParams, $state) {
+    function WaEditSourceController($http, $stateParams, $state) {
       const vm = this;
 
       vm.$onInit = function() {

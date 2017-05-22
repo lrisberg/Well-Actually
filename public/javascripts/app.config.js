@@ -23,7 +23,7 @@
       .state({
         name: 'editSource',
         url: '/sources/:id/edit',
-        component: 'waEdit'
+        component: 'waEditSource'
       })
   }
 
