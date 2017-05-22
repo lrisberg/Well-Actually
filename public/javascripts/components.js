@@ -7,7 +7,7 @@
         const vm = this;
 
         vm.$onInit = function() {
-          $http.get('/sources').then((response) => {
+          $http.get('/api/sources').then((response) => {
             vm.sources = response.data;
           })
         }
@@ -17,7 +17,7 @@
         }
 
         vm.createSource = function() {
-          $http.post('/sources', vm.newSource).then((response) => {
+          $http.post('/api/sources', vm.newSource).then((response) => {
             vm.sources.push(response.data);
           })
           vm.showForm = false;
@@ -32,7 +32,7 @@
         const vm = this;
 
         vm.$onInit = function() {
-          $http.get(`/sources/${$stateParams.id}`).then((response) => {
+          $http.get(`/api/sources/${$stateParams.id}`).then((response) => {
             vm.source = response.data;
           })
         }
@@ -46,19 +46,19 @@
         const vm = this;
 
         vm.$onInit = function() {
-          $http.get(`/sources/${$stateParams.id}`).then((response) => {
+          $http.get(`/api/sources/${$stateParams.id}`).then((response) => {
             vm.editSource = response.data;
           })
         }
 
         vm.updateSource = function() {
-          $http.patch(`/sources/${$stateParams.id}`, vm.editSource).then((response) => {
+          $http.patch(`/api/sources/${$stateParams.id}`, vm.editSource).then((response) => {
             $state.go('dashboard')
           })
         }
 
         vm.deleteSource = function() {
-          $http.delete(`/sources/${$stateParams.id}`).then((response) => {
+          $http.delete(`/api/sources/${$stateParams.id}`).then((response) => {
             $state.go('dashboard')
           })
         }
