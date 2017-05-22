@@ -1,12 +1,7 @@
 class Api::SourcesController < ApplicationController
   def index
-    @sources = if params[:tag]
-      Source.tagged_with(params[:tag])
-      render json: @sources
-    else
-      @sources = Source.all
-      render json: @sources
-    end
+    @sources = Source.all
+    render json: @sources
   end
 
   # explicitly saying the sources/new route exists

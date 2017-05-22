@@ -33,15 +33,15 @@
 
     }
 
-    function WaNewSourceFormController($http) {
+    function WaNewSourceFormController($http, $state) {
       const vm = this;
 
       vm.createSource = function() {
         $http.post('/api/sources', vm.newSource).then((response) => {
           vm.sources.push(response.data);
         })
-        vm.showForm = false;
-        delete vm.newSource;
+        delete vm.newSource
+        $state.go('dashboard')
       }
     }
 
