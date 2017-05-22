@@ -19,7 +19,7 @@
       vm.$onInit = function() {
         $http.get('/api/sources').then((response) => {
           vm.sources = response.data;
-        })
+        });
       }
 
       vm.toggleForm = function() {
@@ -48,11 +48,9 @@
 
       vm.createSource = function() {
         $http.post('/api/sources', vm.newSource).then((response) => {
-          vm.sources.push(response.data);
-        })
-        delete vm.newSource
-        $state.go('dashboard')
-      }
+          $state.go('dashboard');
+        });
+      };
     }
 
     function WaShowSourceController($http, $stateParams) {
