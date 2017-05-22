@@ -3,31 +3,13 @@
     angular
       .module('app')
       .controller('WaNavController', WaNavController)
-      .controller('WaNewSourceFormController', WaNewSourceFormController)
-      .controller('WaSourceController', WaSourceController)
       .controller('WaMainController', WaMainController)
+      .controller('WaSourceController', WaSourceController)
+      .controller('WaNewSourceFormController', WaNewSourceFormController)
       .controller('WaShowSourceController', WaShowSourceController)
       .controller('WaEditController', WaEditController)
 
-
     function WaNavController() {
-
-    }
-
-    function WaNewSourceFormController($http) {
-      const vm = this;
-
-      vm.createSource = function() {
-        $http.post('/api/sources', vm.newSource).then((response) => {
-          vm.sources.push(response.data);
-        })
-        vm.showForm = false;
-        delete vm.newSource;
-      }
-    }
-
-    function WaSourceController() {
-      const vm = this;
 
     }
 
@@ -42,6 +24,23 @@
 
       vm.toggleForm = function() {
         vm.showForm = !vm.showForm;
+      }
+    }
+
+    function WaSourceController() {
+      const vm = this;
+
+    }
+
+    function WaNewSourceFormController($http) {
+      const vm = this;
+
+      vm.createSource = function() {
+        $http.post('/api/sources', vm.newSource).then((response) => {
+          vm.sources.push(response.data);
+        })
+        vm.showForm = false;
+        delete vm.newSource;
       }
     }
 
