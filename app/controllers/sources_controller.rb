@@ -33,7 +33,7 @@ class SourcesController < ApplicationController
     @source = Source.find(params[:id])
 
     if @source.update(source_params)
-      head :ok
+      render json: @source, status: :ok, location: @source
     else
       render json: @source.errors, status: :unprocessable_entity
     end

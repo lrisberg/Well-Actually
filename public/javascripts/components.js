@@ -53,6 +53,7 @@
 
         vm.updateSource = function() {
           $http.patch(`/sources/${$stateParams.id}`, vm.editSource).then((response) => {
+            console.log(response);
             $state.go('dashboard')
           })
         }
