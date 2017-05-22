@@ -10,39 +10,12 @@
           <h4 class="media-heading">
             <a ui-sref="#">{{$ctrl.source.title}}</a>
             |
-            <a><i class="glyphicon glyphicon-arrow-up"></i></a>
-            <a><i class="glyphicon glyphicon-arrow-down"></i></a>
-            10
+            <a ui-sref="editSource({ id: $ctrl.source.id })">edit</a>
           </h4>
-          <div class="text-right">
-            Some Author
-          </div>
+          <a href="{{$ctrl.source.link}}">Go to the Source!</a>
           <p>
             {{$ctrl.source.abstract}}
           </p>
-          <div>
-            Some time ago |
-            <i class="glyphicon glyphicon-comment"></i>
-            <a>
-              Some comments
-            </a>
-          </div>
-          <div class="row">
-            <div class="col-md-offset-1">
-              <hr>
-              <p>
-                Comment text
-              </p>
-              <form class="form-inline">
-                <div class="form-group">
-                  <input class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="submit" class="btn btn-primary">
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
 
