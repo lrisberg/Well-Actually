@@ -1,5 +1,11 @@
 <div class="container">
 
+  <div class="pull-left">
+    <p><input ng-model="$ctrl.word" type="text">
+      <span ng-repeat="word in $ctrl.synonyms">{{word}}, </span>
+    <a class="btn btn-info" ng-click="$ctrl.getSynonyms($ctrl.word)">Pontificate!</a></p>
+  </div>
+
   <div class="pull-right">
     <p><a class="btn btn-info" ui-sref="newSource">New Source</a></p>
   </div>
