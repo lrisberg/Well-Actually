@@ -1,59 +1,11 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand">Well-Actually</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    </div>
-  </div>
-</nav>
-
 <div class="container">
-  
+
   <div class="pull-right">
     <p><a class="btn btn-info" ng-click="$ctrl.toggleForm()">New Source</a></p>
   </div>
 
-  <div ng-if="$ctrl.showForm" class="row">
-    <div class="col-md-8">
-
-      <form ng-submit="$ctrl.createSource()">
-        <div>
-          <label for="title">Title</label>
-          <input ng-model="$ctrl.newSource.title" id="title" class="form-control">
-        </div>
-        <div>
-          <label for="link">Link</label>
-          <input ng-model="$ctrl.newSource.link" id="link" class="form-control">
-        </div>
-        <div>
-          <label for="abstract">Abstract</label>
-          <textarea ng-model="$ctrl.newSource.abstract" id="abstract" class="form-control"></textarea>
-        </div>
-        <div>
-          <label for="journal">Journal</label>
-          <input ng-model="$ctrl.newSource.journal" id="journal" class="form-control">
-        </div>
-        <div>
-          <label for="notes">Notes</label>
-          <textarea ng-model="$ctrl.newSource.notes" id="notes" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">
-            Create Source
-          </button>
-        </div>
-      </form>
-
-    </div>
-  </div>
+  <!-- sources and showForm variables are bound from the Main controller -->
+  <wa-new-source-form sources="$ctrl.sources" show-form="$ctrl.showForm" ng-if="$ctrl.showForm"></wa-new-source-form>
 
   <div class="row" ng-repeat="source in $ctrl.sources">
     <div class="col-md-12">

@@ -15,14 +15,6 @@
         vm.toggleForm = function() {
           vm.showForm = !vm.showForm;
         }
-
-        vm.createSource = function() {
-          $http.post('/api/sources', vm.newSource).then((response) => {
-            vm.sources.push(response.data);
-          })
-          vm.showForm = false;
-          delete vm.newSource;
-        }
       },
       templateUrl: 'views/waMain.html'
     })
@@ -66,4 +58,20 @@
 
       templateUrl: 'views/waEdit.html'
     })
+
+    .component('waNav', {
+      controller: 'WaNavController',
+      controllerAs: '$ctrl',
+      templateUrl: 'views/waNav.html'
+    })
+    .component('waNewSourceForm', {
+      bindings: {
+        'sources': '=',
+        'showForm': '='
+      },
+      controller: 'WaNewSourceFormController',
+      controllerAs: '$ctrl',
+      templateUrl: 'views/waNewSourceForm.html'
+    });
+
 })();

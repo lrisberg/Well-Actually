@@ -22,7 +22,7 @@ class Api::SourcesController < ApplicationController
     @source = Source.new(source_params)
 
     if @source.save
-      render json: @source, status: :created, location: @source
+      render json: @source, status: :created
     else
       render json: @source.errors, status: :unprocessable_entity
     end
@@ -32,7 +32,7 @@ class Api::SourcesController < ApplicationController
     @source = Source.find(params[:id])
 
     if @source.update(source_params)
-      render json: @source, status: :ok, location: @source
+      render json: @source, status: :ok
     else
       render json: @source.errors, status: :unprocessable_entity
     end
@@ -42,7 +42,6 @@ class Api::SourcesController < ApplicationController
     @source = Source.find(params[:id])
     @source.destroy
   end
-
 
   private
     def source_params
