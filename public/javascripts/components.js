@@ -22,10 +22,6 @@
       templateUrl: 'views/waSource.html'
     })
     .component('waNewSourceForm', {
-      bindings: {
-        'sources': '=',
-        'showForm': '='
-      },
       controller: 'WaNewSourceFormController',
       controllerAs: '$ctrl',
       templateUrl: 'views/waNewSourceForm.html'
