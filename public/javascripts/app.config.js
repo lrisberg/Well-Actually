@@ -18,7 +18,7 @@
       .state({
         name: 'sources',
         url: '/sources',
-        component: 'waMain',
+        component: 'waSourcesMainPage',
       })
       .state({
         name: 'sourceNew',

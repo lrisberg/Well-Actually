@@ -4,7 +4,7 @@
       .module('app')
       .controller('WaSplashController', WaSplashController)
       .controller('WaNavController', WaNavController)
-      .controller('WaMainController', WaMainController)
+      .controller('WaSourcesMainPageController', WaSourcesMainPageController)
       .controller('WaSourceController', WaSourceController)
       .controller('WaSourceNewPageController', WaSourceNewPageController)
       .controller('WaSourceShowController', WaSourceShowController)
@@ -39,7 +39,7 @@
 
     }
 
-    function WaMainController(WaService) {
+    function WaSourcesMainPageController(WaService) {
       const vm = this;
 
       vm.$onInit = function() {
@@ -49,7 +49,7 @@
       }
     }
 
-    WaMainController.$inject = ['WaService']
+    WaSourcesMainPageController.$inject = ['WaService']
 
     function WaSourceController() {
       const vm = this;

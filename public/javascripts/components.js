@@ -7,10 +7,10 @@
       controllerAs: '$ctrl',
       templateUrl: 'views/waNav.html'
     })
-    .component('waMain', {
-      controller: 'WaMainController',
+    .component('waSourcesMainPage', {
+      controller: 'WaSourcesMainPageController',
       controllerAs: '$ctrl',
-      templateUrl: 'views/waMain.html'
+      templateUrl: 'views/waSourcesMainPage.html'
     })
     .component('waSource', {
       bindings: {
