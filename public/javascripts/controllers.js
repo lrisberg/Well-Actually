@@ -13,7 +13,7 @@
       .controller('WaProfileEditController', WaProfileEditController)
       .controller('WaPontificatorController', WaPontificatorController)
 
-    function WaSplashController() {
+    function WaSplashController($state) {
       const vm = this;
 
       vm.toggleLoginForm = function() {
@@ -22,6 +22,16 @@
 
       vm.toggleSignupForm = function() {
         vm.showSignupForm = !vm.showSignupForm;
+      }
+
+      vm.submitLogin = function() {
+        console.log(vm.loginDetails);
+        $state.go('sources')
+      }
+
+      vm.submitSignup = function() {
+        console.log(vm.signupDetails);
+        $state.go('sources')
       }
     }
 

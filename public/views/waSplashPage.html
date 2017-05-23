@@ -3,7 +3,7 @@
 <a ng-click="$ctrl.toggleLoginForm()">Login</a>
 
 <div class="container">
-  <form ng-if="$ctrl.showLoginForm" ng-submit="">
+  <form ng-if="$ctrl.showLoginForm" ng-submit="$ctrl.submitLogin()">
     <div>
       <label for="email">email</label>
       <input ng-model="$ctrl.loginDetails.email" class="form-control">
@@ -23,7 +23,7 @@
 <a ng-click="$ctrl.toggleSignupForm()">Signup</a>
 
 <div class="container">
-  <form ng-if="$ctrl.showSignupForm" ng-submit="">
+  <form ng-if="$ctrl.showSignupForm" ng-submit="$ctrl.submitSignup()">
     <div>
       <label for="email">email</label>
       <input ng-model="$ctrl.signupDetails.email" class="form-control">
