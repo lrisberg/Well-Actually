@@ -15,7 +15,9 @@
             |
             <a ui-sref="sourceEdit({ id: $ctrl.source.id })">edit</a>
           </h4>
-          <a href="{{$ctrl.source.link}}">Go to the Source!</a>
+          <p><a href="{{$ctrl.source.link}}">Go to the Source!</a></p>
+          <p>Argument Wins: {{$ctrl.source.wins}}</p>
+          <p>Friends Lost: {{$ctrl.source.friendsLost}}</p>
           <p>
             {{$ctrl.source.abstract}}
           </p>

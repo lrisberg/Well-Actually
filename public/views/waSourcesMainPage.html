@@ -1,10 +1,10 @@
 <div class="container">
 
-  <wa-sources-filter-sort sort-option="$ctrl.sortOption" sort-options="$ctrl.sortOptions" filter="$ctrl.filter"></wa-sources-filter-sort>
-
   <div class="pull-right">
     <p><a class="btn btn-info" ui-sref="sourceNew">New Source</a></p>
   </div>
+
+  <wa-sources-filter-sort sort-option="$ctrl.sortOption" sort-options="$ctrl.sortOptions" filter="$ctrl.filter"></wa-sources-filter-sort>
 
   <!-- remember when binding to pass in the variables/data you're passing to a new controller -->
   <wa-source ng-repeat="source in $ctrl.sources | filter:$ctrl.filter | orderBy:$ctrl.sortOption.property" source="source"></wa-source>
