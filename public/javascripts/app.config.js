@@ -21,14 +21,14 @@
         component: 'waNewSourcePage'
       })
       .state({
-        name: 'showSource',
+        name: 'sourceShow',
         url: '/sources/:id',
-        component: 'waShowSource'
+        component: 'waSourceShow'
       })
       .state({
-        name: 'editSource',
+        name: 'sourceEdit',
         url: '/sources/:id/edit',
-        component: 'waEditSource'
+        component: 'waSourceEdit'
       })
   }
 

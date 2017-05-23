@@ -26,15 +26,15 @@
       controllerAs: '$ctrl',
       templateUrl: 'views/waNewSourcePage.html'
     })
-    .component('waShowSource', {
-      controller: 'WaShowSourceController',
+    .component('waSourceShow', {
+      controller: 'WaSourceShowController',
       controllerAs: '$ctrl',
-      templateUrl: 'views/waShowSource.html'
+      templateUrl: 'views/waSourceShow.html'
     })
-    .component('waEditSource', {
-      controller: 'WaEditSourceController',
+    .component('waSourceEdit', {
+      controller: 'WaSourceEditController',
       controllerAs: '$ctrl',
-      templateUrl: 'views/waEditSourcePage.html'
+      templateUrl: 'views/waSourceEditPage.html'
     })
 
 

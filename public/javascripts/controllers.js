@@ -6,8 +6,8 @@
       .controller('WaMainController', WaMainController)
       .controller('WaSourceController', WaSourceController)
       .controller('WaNewSourcePageController', WaNewSourcePageController)
-      .controller('WaShowSourceController', WaShowSourceController)
-      .controller('WaEditSourceController', WaEditSourceController)
+      .controller('WaSourceShowController', WaSourceShowController)
+      .controller('WaSourceEditController', WaSourceEditController)
 
     function WaNavController() {
 
@@ -48,7 +48,7 @@
       };
     }
 
-    function WaShowSourceController(WaService, $stateParams) {
+    function WaSourceShowController(WaService, $stateParams) {
       const vm = this;
 
       vm.$onInit = function() {
@@ -58,7 +58,7 @@
       }
     }
 
-    function WaEditSourceController(WaService, $stateParams, $state) {
+    function WaSourceEditController(WaService, $stateParams, $state) {
       const vm = this;
 
       vm.$onInit = function() {
