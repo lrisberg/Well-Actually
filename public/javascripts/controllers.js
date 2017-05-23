@@ -10,6 +10,7 @@
       .controller('WaSourceShowController', WaSourceShowController)
       .controller('WaSourceEditController', WaSourceEditController)
       .controller('WaProfileController', WaProfileController)
+      .controller('WaProfileEditController', WaProfileEditController)
 
     function WaSplashController() {
       const vm = this;
@@ -96,5 +97,9 @@
 
     function WaProfileController() {
 
+    }
+
+    function WaProfileEditController() {
+      
     }
 })();

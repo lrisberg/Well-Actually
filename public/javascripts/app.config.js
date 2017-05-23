@@ -41,6 +41,12 @@
         url: '/profile',
         component: 'waProfile'
       })
+      .state({
+        name: 'profileEdit',
+        //add id later
+        url: '/profile/edit',
+        component: 'waProfileEdit'
+      })
   }
 
 }());

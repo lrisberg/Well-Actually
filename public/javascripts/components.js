@@ -44,6 +44,10 @@
       controller: 'WaProfileController',
       templateUrl: 'views/waProfile.html'
     })
+    .component('waProfileEdit', {
+      controller: 'WaProfileEditController',
+      templateUrl: 'views/waProfileEdit.html'
+    })
 
 
 })();
