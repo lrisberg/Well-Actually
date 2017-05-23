@@ -35,6 +35,12 @@
         url: '/sources/:id/edit',
         component: 'waSourceEdit'
       })
+      .state({
+        name: 'profile',
+        //add id later
+        url: '/profile',
+        component: 'waProfile'
+      })
   }
 
 }());

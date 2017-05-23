@@ -9,9 +9,10 @@
       .controller('WaSourceNewPageController', WaSourceNewPageController)
       .controller('WaSourceShowController', WaSourceShowController)
       .controller('WaSourceEditController', WaSourceEditController)
+      .controller('WaProfileController', WaProfileController)
 
     function WaSplashController() {
-      
+
     }
 
     function WaNavController() {
@@ -83,7 +84,9 @@
           $state.go('dashboard')
         })
       }
+    }
 
-
+    function WaProfileController() {
+      
     }
 })();

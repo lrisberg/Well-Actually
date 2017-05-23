@@ -40,6 +40,10 @@
       controllerAs: '$ctrl',
       templateUrl: 'views/waSplash.html'
     })
+    .component('waProfile', {
+      controller: 'WaProfileController',
+      templateUrl: 'views/waProfile.html'
+    })
 
 
 })();
