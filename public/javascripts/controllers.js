@@ -11,6 +11,7 @@
       .controller('WaSourceEditController', WaSourceEditController)
       .controller('WaProfileController', WaProfileController)
       .controller('WaProfileEditController', WaProfileEditController)
+      .controller('WaPontificatorController', WaPontificatorController)
 
     function WaSplashController() {
       const vm = this;
@@ -35,15 +36,6 @@
         WaService.getSources().then((response) => {
           vm.sources = response;
         });
-      }
-
-      vm.getSynonyms = function(word) {
-        WaService.getSynonyms(word).then((response) => {
-          let data = response;
-          for (key in data) {
-            vm.synonyms = data[key].syn;
-          }
-        })
       }
     }
 
@@ -100,6 +92,19 @@
     }
 
     function WaProfileEditController() {
-      
+
+    }
+
+    function WaPontificatorController(WaService) {
+      const vm = this;
+
+      vm.getSynonyms = function(word) {
+        WaService.getSynonyms(word).then((response) => {
+          let data = response;
+          for (key in data) {
+            vm.synonyms = data[key].syn;
+          }
+        })
+      }
     }
 })();

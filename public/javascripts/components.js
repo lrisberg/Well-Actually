@@ -48,6 +48,10 @@
       controller: 'WaProfileEditController',
       templateUrl: 'views/waProfileEditPage.html'
     })
+    .component('waPontificator', {
+      controller: 'WaPontificatorController',
+      templateUrl: 'views/waPontificator.html'
+    })
 
 
 })();
