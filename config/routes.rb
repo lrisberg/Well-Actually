@@ -7,9 +7,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :sources
+    resources :users
   end
 
   root 'welcome#index'
+
+  # if there are errors try to move this elsewhere....
+  post 'authenticate', to: 'authentication#authenticate'
 
   get "*any", via: :all, to: "welcome#index"
 end
