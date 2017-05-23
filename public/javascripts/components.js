@@ -38,15 +38,15 @@
     .component('waSplash', {
       controller: 'WaSplashController',
       controllerAs: '$ctrl',
-      templateUrl: 'views/waSplash.html'
+      templateUrl: 'views/waSplashPage.html'
     })
     .component('waProfile', {
       controller: 'WaProfileController',
-      templateUrl: 'views/waProfile.html'
+      templateUrl: 'views/waProfilePage.html'
     })
     .component('waProfileEdit', {
       controller: 'WaProfileEditController',
-      templateUrl: 'views/waProfileEdit.html'
+      templateUrl: 'views/waProfileEditPage.html'
     })
 
 
