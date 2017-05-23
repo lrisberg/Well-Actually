@@ -63,6 +63,7 @@
 
     vm.$onInit = function() {
       WaService.getSources().then((response) => {
+        console.log(response);
         vm.sources = response;
       });
     }
@@ -95,10 +96,15 @@
     const vm = this;
   }
 
+  function makeArray(string) {
+    return string.split(', ');
+  }
+
   function WaSourceNewPageController(WaService, $state) {
     const vm = this;
 
     vm.createSource = function() {
+      vm.newSource.tags = makeArray(vm.newSource.tags)
       WaService.createSource(vm.newSource).then((response) => {
         $state.go('sources');
       });

@@ -16,6 +16,7 @@ class Api::SourcesController < ApplicationController
 
   def create
     @source = Source.new(source_params)
+    puts source_params
 
     if @source.save
       render json: @source, status: :created
@@ -55,6 +56,6 @@ class Api::SourcesController < ApplicationController
 
   private
     def source_params
-      params.require(:source).permit(:id, :title, :link, :journal, :abstract, :notes)
+      params.require(:source).permit(:id, :title, :link, :journal, :abstract, :notes, :tags => [])
     end
 end

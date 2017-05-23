@@ -24,8 +24,8 @@
           <textarea ng-model="$ctrl.newSource.notes" id="notes" class="form-control"></textarea>
         </div>
         <div>
-          <label for="tags">Tags (enter only one)</label>
-          <input id="tags" class="form-control">
+          <label for="tags">Tags (separated by commas)</label>
+          <input ng-model="$ctrl.newSource.tags" id="tags" class="form-control">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">
