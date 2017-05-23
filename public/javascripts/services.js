@@ -36,6 +36,12 @@
           return response.data;
         })
       }
+
+      this.getSynonyms = function(word) {
+        return $http.get(`http://words.bighugelabs.com/api/2/0d810a8b06d0aa825cc498c6f7805081/${word}/json`).then((response) => {
+          return response.data;
+        })
+      }
     }
 
     WaService.$inject = ["$http"];
