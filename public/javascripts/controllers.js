@@ -13,12 +13,12 @@
 
     }
 
-    function WaMainController($http) {
+    function WaMainController(WaService) {
       const vm = this;
 
       vm.$onInit = function() {
-        $http.get('/api/sources').then((response) => {
-          vm.sources = response.data;
+        WaService.getSources().then((response) => {
+          vm.sources = response;
         });
       }
 
@@ -34,6 +34,8 @@
       }
     }
 
+    WaMainController.$inject = ['WaService']
+
     function WaSourceController() {
       const vm = this;
     }
@@ -48,12 +50,12 @@
       };
     }
 
-    function WaShowSourceController($http, $stateParams) {
+    function WaShowSourceController(WaService, $stateParams) {
       const vm = this;
 
       vm.$onInit = function() {
-        $http.get(`/api/sources/${$stateParams.id}`).then((response) => {
-          vm.source = response.data;
+        WaService.getSource($stateParams.id).then((response) => {
+          vm.source = response;
         })
       }
     }
