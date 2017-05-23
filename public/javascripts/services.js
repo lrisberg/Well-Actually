@@ -48,6 +48,12 @@
           return response.data;
         })
       }
+
+      this.loseFriend = function(sourceId) {
+        return $http.delete(`${BASE_URL}/${sourceId}/lose_friend`).then((response) => {
+          return response.data;
+        })
+      }
     }
 
     WaService.$inject = ["$http"];
