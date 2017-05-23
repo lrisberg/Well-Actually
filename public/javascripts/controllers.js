@@ -36,7 +36,6 @@
 
     function WaSourceController() {
       const vm = this;
-
     }
 
     function WaNewSourcePageController($http, $state) {
