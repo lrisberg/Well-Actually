@@ -8,7 +8,8 @@ class CreateSources < ActiveRecord::Migration[5.1]
       t.text :abstract
       t.text :notes
       t.integer :wins
-      
+      t.integer :friends_lost
+
       t.timestamps
     end
   end

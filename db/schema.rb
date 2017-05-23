@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170522195532) do
     t.text "abstract"
     t.text "notes"
     t.integer "wins"
+    t.integer "friends_lost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
