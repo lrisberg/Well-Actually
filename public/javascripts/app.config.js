@@ -11,8 +11,13 @@
 
     $stateProvider
       .state({
-        name: 'dashboard',
+        name: 'splash',
         url: '/',
+        component: 'waSplash'
+      })
+      .state({
+        name: 'sources',
+        url: '/sources',
         component: 'waMain',
       })
       .state({

@@ -7,7 +7,6 @@
       controllerAs: '$ctrl',
       templateUrl: 'views/waNav.html'
     })
-
     .component('waMain', {
       controller: 'WaMainController',
       controllerAs: '$ctrl',
@@ -35,6 +34,11 @@
       controller: 'WaSourceEditController',
       controllerAs: '$ctrl',
       templateUrl: 'views/waSourceEditPage.html'
+    })
+    .component('waSplash', {
+      controller: 'WaSplashController',
+      controllerAs: '$ctrl',
+      templateUrl: 'views/waSplash.html'
     })
 
 

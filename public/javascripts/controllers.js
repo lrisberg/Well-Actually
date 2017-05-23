@@ -2,12 +2,17 @@
 
     angular
       .module('app')
+      .controller('WaSplashController', WaSplashController)
       .controller('WaNavController', WaNavController)
       .controller('WaMainController', WaMainController)
       .controller('WaSourceController', WaSourceController)
       .controller('WaSourceNewPageController', WaSourceNewPageController)
       .controller('WaSourceShowController', WaSourceShowController)
       .controller('WaSourceEditController', WaSourceEditController)
+
+    function WaSplashController() {
+      
+    }
 
     function WaNavController() {
 
