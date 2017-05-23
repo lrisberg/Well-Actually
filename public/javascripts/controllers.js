@@ -12,7 +12,15 @@
       .controller('WaProfileController', WaProfileController)
 
     function WaSplashController() {
+      const vm = this;
 
+      vm.toggleLoginForm = function() {
+        vm.showLoginForm = !vm.showLoginForm;
+      }
+
+      vm.toggleSignupForm = function() {
+        vm.showSignupForm = !vm.showSignupForm;
+      }
     }
 
     function WaNavController() {
@@ -87,6 +95,6 @@
     }
 
     function WaProfileController() {
-      
+
     }
 })();
