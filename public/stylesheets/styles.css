@@ -1,8 +1,15 @@
+
 html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
+/*=====================================================================================*/
+/* this section is used specifially used for the hamburger icon and its functionality*/
+/*=====================================================================================*/
+
+
 .hamb{
   width: 24px;
   height: 4px;
@@ -10,13 +17,10 @@ html, body {
   margin-bottom: 3px;
 
 }
-/*#navbar{
-  height: 45px;
-  width: 100%;
-  position: absolute;
-  z-index:99;
-  background: black;
-}*/
+
+/*usure what this does, currently works without*/
+
+/*
 .page-content {
   width: 75%;
   margin: auto;
@@ -26,7 +30,7 @@ html, body {
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
   background: #eeeeee;
-}
+}*/
 
 .toggle {
   text-decoration: none;
@@ -52,7 +56,7 @@ html, body {
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
-  width: 120px;
+  width: 150px;
   padding: 30px;
   background: #333333;
   z-index: 97;
@@ -91,3 +95,15 @@ html, body {
     opacity: .8;
 
   }
+/*=====================================================================================*/
+/* end hamburger section*/
+/*=====================================================================================*/
+
+
+/* add additional css here*/
+
+.menuPhoto {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
