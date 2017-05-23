@@ -78,7 +78,11 @@ html, body {
     cursor: pointer; }
 
 .sidebar li:hover {
-      color: white; }
+      color: white;
+}
+.sidebar li a:focus {
+      background-color: yellow;
+}
 
 #sidebartoggler {
   display: none;
@@ -107,3 +111,7 @@ html, body {
   width: 100px;
   height: 100px;
 }
+
+/*=====================================================================================*/
+/* test */
+/*=====================================================================================*/

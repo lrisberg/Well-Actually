@@ -37,7 +37,11 @@
   }
 
   function WaNavController() {
+    const vm = this;
 
+    vm.retractMenu = function() {
+      vm.menuToggler = false;
+    }
   }
 
   function WaSourcesMainPageController(WaService) {

@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     </div>
   </div>
-  <input type="checkbox" id="sidebartoggler" name="" value="">
+  <input type="checkbox" ng-model="$ctrl.menuToggler" id="sidebartoggler" name="" value="">
 
 <div class="page-wrap">
 
@@ -37,10 +37,13 @@
       <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
       </div>
       </li>
-      <li>Projects</li>
-      <li>Clients</li>
-      <li>Blog</li>
-      <li>Contact</li>
+      <li>Wins: tba</li><hr>
+      <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
+      <li><a ui-sref="profile" ng-click="$ctrl.retractMenu()">Profile</a></li>
+        <!-- need to add an anchor tag to splash -->
+      <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li><hr>
+        <!-- connects to controller when ready -->
+      <li><a ui-sref="#">Logout</a></li>
     </ul>
   </div>
 
