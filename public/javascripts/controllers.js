@@ -97,6 +97,9 @@
     }
 
     vm.addWin = function() {
+      WaService.addWin($stateParams.id).then((response) => {
+        console.log(response);
+      })
       vm.source.wins += 1;
     }
   }

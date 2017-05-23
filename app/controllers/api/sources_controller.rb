@@ -43,6 +43,16 @@ class Api::SourcesController < ApplicationController
     @source.destroy
   end
 
+  def wins
+    #puts params[:source_id]
+    @source = Source.find(params[:source_id])
+    #puts @source
+    puts @source.wins
+    # @source.wins.create
+    puts @source.wins
+    render json: @source, status: :ok
+  end
+
   private
     def source_params
       params.require(:source).permit(:id, :title, :link, :journal, :abstract, :notes)
