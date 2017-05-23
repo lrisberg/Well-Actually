@@ -60,23 +60,23 @@
       }
     }
 
-    function WaEditSourceController($http, $stateParams, $state) {
+    function WaEditSourceController(WaService, $stateParams, $state) {
       const vm = this;
 
       vm.$onInit = function() {
-        $http.get(`/api/sources/${$stateParams.id}`).then((response) => {
-          vm.editSource = response.data;
+        WaService.getSource($stateParams.id).then((response) => {
+          vm.editSource = response;
         })
       }
 
       vm.updateSource = function() {
-        $http.patch(`/api/sources/${$stateParams.id}`, vm.editSource).then((response) => {
+        WaService.editSource($stateParams.id, vm.editSource).then((response) => {
           $state.go('dashboard')
         })
       }
 
       vm.deleteSource = function() {
-        $http.delete(`/api/sources/${$stateParams.id}`).then((response) => {
+        WaService.deleteSource($stateParams.id).then((response) => {
           $state.go('dashboard')
         })
       }

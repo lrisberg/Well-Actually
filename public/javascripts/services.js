@@ -24,6 +24,18 @@
           return response.data;
         })
       }
+
+      this.editSource = function(sourceId, source) {
+        return $http.patch(`${BASE_URL}/${sourceId}`, source).then((response) => {
+          return response.data;
+        })
+      }
+
+      this.deleteSource = function(sourceId) {
+        return $http.delete(`${BASE_URL}/${sourceId}`).then((response) => {
+          return response.data;
+        })
+      }
     }
 
     WaService.$inject = ["$http"];
