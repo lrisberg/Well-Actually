@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
     # ruby encoding: utf-8
-    foodgut = Source.create(
+    Source.create(
       title: 'The food-gut human axis: the effects of diet on gut microbiota and metabolome.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/28462705',
       journal: 'Curr Med Chem',
@@ -15,7 +15,7 @@
       notes: 'Veeeeery interesting',
       wins: 1,
       friends_lost: 1)
-    shortterm = Source.create(
+    Source.create(
       title: 'Short-Term Effects of Lupin vs. Whey Supplementation on Glucose and Insulin Responses to a Standardized Meal in a Randomized Cross-Over Trial.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/28443026',
       journal: 'Front Physiol',
@@ -23,17 +23,3 @@
       notes: 'Wow such science',
       wins: 6,
       friends_lost: 2)
-    health = Tag.create(
-      name: 'health'
-    )
-    science = Tag.create(
-      name: 'science'
-    )
-    Tagging.create(
-      tag: health,
-      source: foodgut
-    )
-    Tagging.create(
-      tag: science,
-      source: shortterm
-    )

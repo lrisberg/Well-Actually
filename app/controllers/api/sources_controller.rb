@@ -1,7 +1,7 @@
 class Api::SourcesController < ApplicationController
   def index
     @sources = Source.all
-    render :json => @sources.to_json(include: [:tags])
+    render json: @sources
   end
 
   # explicitly saying the sources/new route exists

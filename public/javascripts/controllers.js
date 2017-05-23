@@ -102,16 +102,15 @@
 
     vm.addWin = function() {
       WaService.addWin($stateParams.id).then((response) => {
-        console.log(response);
+        vm.source.wins += 1;
       })
-      vm.source.wins += 1;
+
     }
 
     vm.loseFriend = function() {
       WaService.loseFriend($stateParams.id).then((response) => {
-        console.log(response);
+        vm.source.friends_lost += 1;
       })
-      vm.source.friends_lost += 1;
     }
   }
 
