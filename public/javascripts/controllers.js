@@ -25,12 +25,9 @@
       vm.getSynonyms = function(word) {
         WaService.getSynonyms(word).then((response) => {
           let data = response;
-          console.log(data);
           for (key in data) {
             vm.synonyms = data[key].syn;
           }
-          // vm.nounSyns = response.data.noun.syn;
-          // vm.verbSyns = response.data.verb.syn;
         })
       }
     }

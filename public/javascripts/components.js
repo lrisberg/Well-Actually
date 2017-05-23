@@ -34,7 +34,7 @@
     .component('waEditSource', {
       controller: 'WaEditSourceController',
       controllerAs: '$ctrl',
-      templateUrl: 'views/waEdit.html'
+      templateUrl: 'views/waEditSourcePage.html'
     })
 
 
