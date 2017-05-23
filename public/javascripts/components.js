@@ -52,6 +52,15 @@
       controller: 'WaPontificatorController',
       templateUrl: 'views/waPontificator.html'
     })
+    .component('waSourcesFilterSort', {
+      bindings: {
+        'sortOption': '=',
+        'sortOptions': '=',
+        'filter': '='
+      },
+      controller: 'WaSourcesFilterSortController',
+      templateUrl: 'views/waSourcesFilterSort.html'
+    })
 
 
 })();
