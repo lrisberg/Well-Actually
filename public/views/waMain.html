@@ -1,13 +1,8 @@
 <div class="container">
 
-  <wa-pontificator></wa-pontificator>
-
   <div class="pull-right">
     <p><a class="btn btn-info" ui-sref="sourceNew">New Source</a></p>
   </div>
-
-  <!-- sources and showForm variables are bound from the Main controller -->
-  <wa-new-source-form sources="$ctrl.sources" show-form="$ctrl.showForm" ng-if="$ctrl.showForm"></wa-new-source-form>
 
   <!-- remember when binding to pass in the variables/data you're passing to a new controller -->
   <wa-source ng-repeat="source in $ctrl.sources" source="source"></wa-source>

@@ -50,7 +50,7 @@
 
       vm.createSource = function() {
         WaService.createSource(vm.newSource).then((response) => {
-          $state.go('dashboard');
+          $state.go('sources');
         });
       };
     }
@@ -76,13 +76,13 @@
 
       vm.updateSource = function() {
         WaService.editSource($stateParams.id, vm.editSource).then((response) => {
-          $state.go('dashboard')
+          $state.go('sources')
         })
       }
 
       vm.deleteSource = function() {
         WaService.deleteSource($stateParams.id).then((response) => {
-          $state.go('dashboard')
+          $state.go('sources')
         })
       }
     }
