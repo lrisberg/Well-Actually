@@ -18,6 +18,12 @@
           return response.data;
         })
       }
+
+      this.createSource = function(newSource) {
+        return $http.post(BASE_URL, newSource).then((response) => {
+          return response.data;
+        })
+      }
     }
 
     WaService.$inject = ["$http"];

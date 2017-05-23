@@ -40,11 +40,11 @@
       const vm = this;
     }
 
-    function WaNewSourcePageController($http, $state) {
+    function WaNewSourcePageController(WaService, $state) {
       const vm = this;
 
       vm.createSource = function() {
-        $http.post('/api/sources', vm.newSource).then((response) => {
+        WaService.createSource(vm.newSource).then((response) => {
           $state.go('dashboard');
         });
       };
