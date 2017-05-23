@@ -14,6 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     </div>
   </div>
+  <div ng-if="$ctrl.showMenu">
   <input type="checkbox" ng-model="$ctrl.menuToggler" id="sidebartoggler" name="" value="">
 
 <div class="page-wrap">
@@ -40,12 +41,11 @@
       <li>Wins: tba</li><hr>
       <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
       <li><a ui-sref="profile" ng-click="$ctrl.retractMenu()">Profile</a></li>
-        <!-- need to add an anchor tag to splash -->
       <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li><hr>
-        <!-- connects to controller when ready -->
       <li><a ui-sref="#">Logout</a></li>
     </ul>
   </div>
 
+</div>
 </div>
 </nav>

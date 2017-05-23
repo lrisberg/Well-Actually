@@ -36,8 +36,22 @@
     }
   }
 
-  function WaNavController() {
+  function WaNavController($location) {
     const vm = this;
+
+    // vm.location = $location;
+    //
+    // vm.path = vm.location.path();
+    //
+    // console.log("url", vm.location.path());
+    //
+    // vm.$onInit = function (){
+    //   if(vm.location.path() === '/'){
+    //     vm.showMenu = false;
+    //   }else{
+    vm.showMenu = true;
+    //   }
+    // }
 
     vm.retractMenu = function() {
       vm.menuToggler = false;
