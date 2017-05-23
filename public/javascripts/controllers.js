@@ -95,6 +95,10 @@
         vm.source = response;
       })
     }
+
+    vm.addWin = function() {
+      vm.source.wins += 1;
+    }
   }
 
   function WaSourceEditController(WaService, $stateParams, $state) {

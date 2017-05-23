@@ -42,6 +42,12 @@
           return response.data;
         })
       }
+
+      // this.addWin = function(sourceId) {
+      //   return $http.post(`${BASE_URL}/${sourceId}`).then((response) => {
+      //     return response.data;
+      //   })
+      // }
     }
 
     WaService.$inject = ["$http"];

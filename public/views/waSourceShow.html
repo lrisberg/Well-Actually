@@ -16,8 +16,9 @@
             <a ui-sref="sourceEdit({ id: $ctrl.source.id })">edit</a>
           </h4>
           <p><a href="{{$ctrl.source.link}}">Go to the Source!</a></p>
-          <p>Argument Wins: {{$ctrl.source.wins}}</p>
-          <p>Friends Lost: {{$ctrl.source.friends_lost}}</p>
+          <p>Argument Wins: <strong>{{$ctrl.source.wins}} </strong><a ng-click="$ctrl.addWin()"><i class="glyphicon glyphicon-arrow-up"></i></a></p>
+
+          <p>Friends Lost: <strong>{{$ctrl.source.friends_lost}} </strong><a ng-click="$ctrl.loseFriend()"><i class="glyphicon glyphicon-arrow-down"></i></a></p>
           <p>
             {{$ctrl.source.abstract}}
           </p>
