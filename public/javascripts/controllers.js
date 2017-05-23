@@ -5,7 +5,7 @@
       .controller('WaNavController', WaNavController)
       .controller('WaMainController', WaMainController)
       .controller('WaSourceController', WaSourceController)
-      .controller('WaNewSourcePageController', WaNewSourcePageController)
+      .controller('WaSourceNewPageController', WaSourceNewPageController)
       .controller('WaSourceShowController', WaSourceShowController)
       .controller('WaSourceEditController', WaSourceEditController)
 
@@ -38,7 +38,7 @@
       const vm = this;
     }
 
-    function WaNewSourcePageController(WaService, $state) {
+    function WaSourceNewPageController(WaService, $state) {
       const vm = this;
 
       vm.createSource = function() {
