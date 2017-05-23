@@ -21,10 +21,10 @@
       controllerAs: '$ctrl',
       templateUrl: 'views/waSource.html'
     })
-    .component('waNewSourceForm', {
-      controller: 'WaNewSourceFormController',
+    .component('waNewSourcePage', {
+      controller: 'WaNewSourcePageController',
       controllerAs: '$ctrl',
-      templateUrl: 'views/waNewSourceForm.html'
+      templateUrl: 'views/waNewSourcePage.html'
     })
     .component('waShowSource', {
       controller: 'WaShowSourceController',

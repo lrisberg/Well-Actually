@@ -18,7 +18,7 @@
       .state({
         name: 'newSource',
         url: '/sources/new',
-        component: 'waNewSourceForm'
+        component: 'waNewSourcePage'
       })
       .state({
         name: 'showSource',
