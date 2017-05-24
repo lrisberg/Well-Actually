@@ -15,11 +15,11 @@
     </div>
   </div>
   <div ng-if="$ctrl.showMenu">
-  <input type="checkbox" ng-model="$ctrl.menuToggler" id="sidebartoggler" name="" value="">
+    <input type="checkbox" ng-model="$ctrl.menuToggler" id="sidebartoggler" name="" value="">
 
-<div class="page-wrap">
+    <div class="page-wrap">
 
-    <label for="sidebartoggler" class="toggle">
+      <label for="sidebartoggler" class="toggle">
       <div class="hamb">
       </div>
       <div class="hamb" style="">
@@ -32,20 +32,23 @@
 
 
 
-  <div class="sidebar">
-    <ul>
-      <li><div>
-      <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <div>
+              <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+            </div>
+          </li>
+          <li>Wins: tba</li>
+          <hr>
+          <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
+          <li><a ui-sref="profileEdit" ng-click="$ctrl.retractMenu()">Edit Profile</a></li>
+          <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li>
+          <hr>
+          <li><a ui-sref="#">Logout</a></li>
+        </ul>
       </div>
-      </li>
-      <li>Wins: tba</li><hr>
-      <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
-      <li><a ui-sref="profile" ng-click="$ctrl.retractMenu()">Profile</a></li>
-      <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li><hr>
-      <li><a ui-sref="#">Logout</a></li>
-    </ul>
-  </div>
 
-</div>
-</div>
+    </div>
+  </div>
 </nav>
