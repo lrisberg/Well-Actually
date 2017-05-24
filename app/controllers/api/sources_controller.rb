@@ -16,7 +16,6 @@ class Api::SourcesController < ApplicationController
 
   def create
     @source = Source.new(source_params)
-    puts source_params
 
     if @source.save
       render json: @source, status: :created
@@ -42,16 +41,6 @@ class Api::SourcesController < ApplicationController
   def destroy
     @source = Source.find(params[:id])
     @source.destroy
-  end
-
-  def wins
-    #puts params[:source_id]
-    @source = Source.find(params[:source_id])
-    #puts @source
-    puts @source.wins
-    # @source.wins.create
-    puts @source.wins
-    render json: @source, status: :ok
   end
 
   private
