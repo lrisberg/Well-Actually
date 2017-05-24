@@ -103,9 +103,9 @@
 
   function WaSourceNewPageController(WaService, $state) {
     const vm = this;
+    vm.newSource = { tags: [] };
 
     vm.createSource = function() {
-      vm.newSource.tags = makeArray(vm.newSource.tags)
       WaService.createSource(vm.newSource).then((response) => {
         $state.go('sources');
       });
