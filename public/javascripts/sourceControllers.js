@@ -45,8 +45,17 @@
     const vm = this;
 
     vm.$onInit = function() {
+
+      let userId = SourceService.getUserId(SourceService.getToken());
+
       SourceService.getSources().then((response) => {
-        vm.sources = response;
+        let ownersSources = [];
+        for (let i = 0; i < response.length; i++) {
+          if (response[i].user_id === userId) {
+            ownersSources.push(response[i]);
+          }
+        }
+        vm.sources = ownersSources;
       });
     }
 
@@ -80,22 +89,12 @@
 
 
 
-  function WaSourceNewPageController(SourceService, $state, $window) {
+  function WaSourceNewPageController(SourceService, $state) {
     const vm = this;
 
     vm.newSource = {
       tags: []
     };
-
-    function getToken() {
-      return $window.localStorage.token;
-    }
-
-    function getUserId(token) {
-      let payload = JSON.parse(token).auth_token.split(".")[1];
-      let user_id = JSON.parse($window.atob(payload)).user_id;
-      return user_id;
-    }
 
     vm.$onInit = function() {
 

@@ -4,7 +4,7 @@
     .module('app')
     .service('SourceService', SourceService)
 
-  function SourceService($http) {
+  function SourceService($http, $window) {
     const BASE_URL = '/api/sources';
 
     this.getSources = function() {
@@ -54,8 +54,18 @@
         return response.data;
       })
     }
+
+    this.getToken = function() {
+      return $window.localStorage.token;
+    }
+
+    this.getUserId = function(token) {
+      let payload = JSON.parse(token).auth_token.split(".")[1];
+      let user_id = JSON.parse($window.atob(payload)).user_id;
+      return user_id;
+    }
   }
 
-  SourceService.$inject = ["$http"];
+  SourceService.$inject = ["$http", "$window"];
 
 })();
