@@ -15,40 +15,8 @@
     .controller('WaSourcesFilterSortController', WaSourcesFilterSortController)
     .controller('WaTagFormInputController', WaTagFormInputController)
 
-  function WaSplashController($state, WaService) {
+  function WaSplashController() {
     const vm = this;
-
-    vm.toggleLoginForm = function() {
-      vm.showLoginForm = !vm.showLoginForm;
-    }
-
-    vm.toggleSignupForm = function() {
-      vm.showSignupForm = !vm.showSignupForm;
-    }
-
-    vm.submitLogin = function() {
-      WaService.login(vm.loginDetails).then((token) => {
-        WaService.setCurrentUser(token);
-        $state.go('sources')
-      })
-    }
-
-    vm.submitSignup = function() {
-      let submitUser = {
-        user: {
-          email: vm.signupDetails.email,
-          password: vm.signupDetails.password,
-          password_confirmation: vm.signupDetails.password
-        }
-      };
-      WaService.signup(JSON.stringify(submitUser)).then((response) => {
-        WaService.login(vm.signupDetails).then((token) => {
-          WaService.setCurrentUser(token);
-          $state.go('sources')
-        })
-      });
-
-    }
   }
 
   function WaNavController($location) {
@@ -108,10 +76,6 @@
 
   function WaSourceController() {
     const vm = this;
-  }
-
-  function makeArray(string) {
-    return string.split(', ');
   }
 
   function WaSourceNewPageController(WaService, $state) {

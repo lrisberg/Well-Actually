@@ -1,0 +1,19 @@
+<a ng-click="$ctrl.toggleSignupForm()">Signup</a>
+
+<div class="container">
+  <form ng-if="$ctrl.showSignupForm" ng-submit="$ctrl.submitSignup()">
+    <div>
+      <label for="email">email</label>
+      <input ng-model="$ctrl.signupDetails.email" class="form-control">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input ng-model="$ctrl.signupDetails.password" class="form-control">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">
+    Sign Up
+  </button>
+    </div>
+  </form>
+</div>
