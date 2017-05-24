@@ -25,3 +25,8 @@
       wins: 6,
       friends_lost: 2,
       tags: ["health", "diet"])
+    User.create(
+      email: 'admin@wa.com',
+      password: '123',
+      password_confirmation: '123'
+    )
