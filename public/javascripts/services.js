@@ -54,6 +54,14 @@
           return response.data;
         })
       }
+
+      this.login = function(user) {
+        console.log('inside services login');
+        return $http.post('/authenticate', user).then((response) => {
+          console.log('inside httppost response');
+          return response.data;
+        });
+      }
     }
 
     WaService.$inject = ["$http"];

@@ -15,7 +15,7 @@
     .controller('WaSourcesFilterSortController', WaSourcesFilterSortController)
     .controller('WaTagFormInputController', WaTagFormInputController)
 
-  function WaSplashController($state) {
+  function WaSplashController($state, WaService) {
     const vm = this;
 
     vm.toggleLoginForm = function() {
@@ -28,6 +28,9 @@
 
     vm.submitLogin = function() {
       console.log(vm.loginDetails);
+      WaService.login(vm.loginDetails).then((response) => {
+        console.log(response);
+      })
       $state.go('sources')
     }
 
@@ -64,7 +67,6 @@
 
     vm.$onInit = function() {
       WaService.getSources().then((response) => {
-        console.log(response);
         vm.sources = response;
       });
     }
