@@ -78,13 +78,31 @@
     const vm = this;
   }
 
-  function WaSourceNewPageController(SourceService, $state) {
+
+
+  function WaSourceNewPageController(SourceService, $state, $window) {
     const vm = this;
+
     vm.newSource = {
       tags: []
     };
 
+    function getToken() {
+      return $window.localStorage.token;
+    }
+
+    function getUserId(token) {
+      let payload = JSON.parse(token).auth_token.split(".")[1];
+      let user_id = JSON.parse($window.atob(payload)).user_id;
+      return user_id;
+    }
+
+    vm.$onInit = function() {
+
+    }
+
     vm.createSource = function() {
+      vm.newSource.user_id = getUserId(getToken());
       SourceService.createSource(vm.newSource).then((response) => {
         $state.go('sources');
       });

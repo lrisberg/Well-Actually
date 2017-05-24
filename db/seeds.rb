@@ -8,6 +8,7 @@
 
     # ruby encoding: utf-8
     Source.create(
+      user_id: 1,
       title: 'The food-gut human axis: the effects of diet on gut microbiota and metabolome.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/28462705',
       journal: 'Curr Med Chem',
@@ -17,6 +18,7 @@
       friends_lost: 1,
       tags: ["health", "diet"])
     Source.create(
+      user_id: 2,
       title: 'Short-Term Effects of Lupin vs. Whey Supplementation on Glucose and Insulin Responses to a Standardized Meal in a Randomized Cross-Over Trial.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/28443026',
       journal: 'Front Physiol',
@@ -27,6 +29,16 @@
       tags: ["health", "diet"])
     User.create(
       email: 'admin@wa.com',
+      password: '123',
+      password_confirmation: '123'
+    )
+    User.create(
+      email: 'secondUser@wa.com',
+      password: '123',
+      password_confirmation: '123'
+    )
+    User.create(
+      email: 'thirdUser@wa.com',
       password: '123',
       password_confirmation: '123'
     )
