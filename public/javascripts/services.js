@@ -65,15 +65,11 @@
       $window.localStorage.setItem("token", JSON.stringify(token));
     }
 
-    // const setCurrentUser = (data) => {
-    //   let {
-    //     token,
-    //     user
-    //   } = data.data
-    //   $window.localStorage.setItem("token", token);
-    //   $window.localStorage.setItem("user", JSON.stringify(user));
-    // }
-
+    this.signup = function(user) {
+      return $http.post('/api/users', user).then((response) => {
+        return response.data;
+      });
+    }
   }
 
   WaService.$inject = ["$http", "$window"];

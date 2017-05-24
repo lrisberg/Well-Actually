@@ -34,8 +34,17 @@
     }
 
     vm.submitSignup = function() {
-      console.log(vm.signupDetails);
-      $state.go('sources')
+      let submitUser = {
+        user: {
+          email: vm.signupDetails.email,
+          password: vm.signupDetails.password,
+          password_confirmation: vm.signupDetails.password
+        }
+      };
+      WaService.signup(JSON.stringify(submitUser)).then((response) => {
+        $state.go('sources')
+      });
+
     }
   }
 
@@ -104,7 +113,9 @@
 
   function WaSourceNewPageController(WaService, $state) {
     const vm = this;
-    vm.newSource = { tags: [] };
+    vm.newSource = {
+      tags: []
+    };
 
     vm.createSource = function() {
       WaService.createSource(vm.newSource).then((response) => {
