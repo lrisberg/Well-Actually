@@ -42,7 +42,10 @@
         }
       };
       WaService.signup(JSON.stringify(submitUser)).then((response) => {
-        $state.go('sources')
+        WaService.login(vm.signupDetails).then((token) => {
+          WaService.setCurrentUser(token);
+          $state.go('sources')
+        })
       });
 
     }
