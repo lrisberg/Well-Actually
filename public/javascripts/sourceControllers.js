@@ -41,11 +41,11 @@
     }
   }
 
-  function WaSourcesMainPageController(WaService) {
+  function WaSourcesMainPageController(SourceService) {
     const vm = this;
 
     vm.$onInit = function() {
-      WaService.getSources().then((response) => {
+      SourceService.getSources().then((response) => {
         vm.sources = response;
       });
     }
@@ -72,65 +72,65 @@
 
   }
 
-  WaSourcesMainPageController.$inject = ['WaService']
+  WaSourcesMainPageController.$inject = ['SourceService']
 
   function WaSourceController() {
     const vm = this;
   }
 
-  function WaSourceNewPageController(WaService, $state) {
+  function WaSourceNewPageController(SourceService, $state) {
     const vm = this;
     vm.newSource = {
       tags: []
     };
 
     vm.createSource = function() {
-      WaService.createSource(vm.newSource).then((response) => {
+      SourceService.createSource(vm.newSource).then((response) => {
         $state.go('sources');
       });
     };
   }
 
-  function WaSourceShowController(WaService, $stateParams) {
+  function WaSourceShowController(SourceService, $stateParams) {
     const vm = this;
 
     vm.$onInit = function() {
-      WaService.getSource($stateParams.id).then((response) => {
+      SourceService.getSource($stateParams.id).then((response) => {
         vm.source = response;
       })
     }
 
     vm.addWin = function() {
-      WaService.addWin($stateParams.id).then((response) => {
+      SourceService.addWin($stateParams.id).then((response) => {
         vm.source.wins += 1;
       })
 
     }
 
     vm.loseFriend = function() {
-      WaService.loseFriend($stateParams.id).then((response) => {
+      SourceService.loseFriend($stateParams.id).then((response) => {
         vm.source.friends_lost += 1;
       })
     }
   }
 
-  function WaSourceEditController(WaService, $stateParams, $state) {
+  function WaSourceEditController(SourceService, $stateParams, $state) {
     const vm = this;
 
     vm.$onInit = function() {
-      WaService.getSource($stateParams.id).then((response) => {
+      SourceService.getSource($stateParams.id).then((response) => {
         vm.editSource = response;
       })
     }
 
     vm.updateSource = function() {
-      WaService.editSource($stateParams.id, vm.editSource).then((response) => {
+      SourceService.editSource($stateParams.id, vm.editSource).then((response) => {
         $state.go('sources')
       })
     }
 
     vm.deleteSource = function() {
-      WaService.deleteSource($stateParams.id).then((response) => {
+      SourceService.deleteSource($stateParams.id).then((response) => {
         $state.go('sources')
       })
     }
@@ -144,11 +144,11 @@
 
   }
 
-  function WaPontificatorController(WaService) {
+  function WaPontificatorController(SourceService) {
     const vm = this;
 
     vm.getSynonyms = function(word) {
-      WaService.getSynonyms(word).then((response) => {
+      SourceService.getSynonyms(word).then((response) => {
         let data = response;
         for (key in data) {
           vm.synonyms = data[key].syn;

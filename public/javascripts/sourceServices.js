@@ -2,9 +2,9 @@
 
   angular
     .module('app')
-    .service('WaService', WaService)
+    .service('SourceService', SourceService)
 
-  function WaService($http, $window) {
+  function SourceService($http) {
     const BASE_URL = '/api/sources';
 
     this.getSources = function() {
@@ -54,24 +54,8 @@
         return response.data;
       })
     }
-
-    this.login = function(user) {
-      return $http.post('/authenticate', user).then((response) => {
-        return response.data;
-      });
-    }
-
-    this.setCurrentUser = function(token) {
-      $window.localStorage.setItem("token", JSON.stringify(token));
-    }
-
-    this.signup = function(user) {
-      return $http.post('/api/users', user).then((response) => {
-        return response.data;
-      });
-    }
   }
 
-  WaService.$inject = ["$http", "$window"];
+  SourceService.$inject = ["$http"];
 
 })();

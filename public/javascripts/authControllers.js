@@ -6,7 +6,7 @@
       WaLoginFormController)
     .controller('WaSignupFormController', WaSignupFormController)
 
-  function WaLoginFormController($state, WaService) {
+  function WaLoginFormController($state, AuthService) {
     const vm = this;
 
     vm.toggleLoginForm = function() {
@@ -14,14 +14,14 @@
     }
 
     vm.submitLogin = function() {
-      WaService.login(vm.loginDetails).then((token) => {
-        WaService.setCurrentUser(token);
+      AuthService.login(vm.loginDetails).then((token) => {
+        AuthService.setCurrentUser(token);
         $state.go('sources')
       })
     }
   }
 
-  function WaSignupFormController($state, WaService) {
+  function WaSignupFormController($state, AuthService) {
     const vm = this;
 
     vm.toggleSignupForm = function() {
@@ -36,9 +36,9 @@
           password_confirmation: vm.signupDetails.password
         }
       };
-      WaService.signup(JSON.stringify(submitUser)).then((response) => {
-        WaService.login(vm.signupDetails).then((token) => {
-          WaService.setCurrentUser(token);
+      AuthService.signup(JSON.stringify(submitUser)).then((response) => {
+        AuthService.login(vm.signupDetails).then((token) => {
+          AuthService.setCurrentUser(token);
           $state.go('sources')
         })
       });
