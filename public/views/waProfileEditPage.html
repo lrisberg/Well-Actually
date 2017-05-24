@@ -1,1 +1,33 @@
-<h1>Edit yo Profile</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+
+<h1>Edit Profile</h1>
+
+<div>
+<img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+</div>
+
+<form ng-submit="$ctrl.updateProfile()">
+  <div>
+    <label for="photo">Photo</label>
+    <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control">
+  </div>
+<div>
+<label for="email">Email</label>
+<input ng-model="$ctrl.newProfile.email" id="email" class="form-control">
+</div>
+<div>
+<label for="password">Password</label>
+<input type="password" ng-model="$ctrl.newPassword.email" id="password" placeholder="password" class="form-control">
+</div>
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">Update Profile</button>
+</div>
+</form>
+</div>
+</div>
+
+
+
+</div>
