@@ -27,11 +27,10 @@
     }
 
     vm.submitLogin = function() {
-      console.log(vm.loginDetails);
-      WaService.login(vm.loginDetails).then((response) => {
-        console.log(response);
+      WaService.login(vm.loginDetails).then((token) => {
+        WaService.setCurrentUser(token);
+        $state.go('sources')
       })
-      $state.go('sources')
     }
 
     vm.submitSignup = function() {
