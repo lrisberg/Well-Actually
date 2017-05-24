@@ -1,0 +1,6 @@
+<div>
+  <label for="tags">Tags</label>
+  <input ng-model="$ctrl.tagName" id="journal" class="form-control">
+  <button class="btn btn-primary" ng-click="$ctrl.addTag($event)">Add Tag</button>
+  <span ng-repeat="tag in $ctrl.tags" class="label label-default">{{tag}} <a ng-click="$ctrl.removeTag(tag)">X</a></span>
+</div>

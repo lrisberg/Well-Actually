@@ -13,6 +13,7 @@
     .controller('WaProfileEditController', WaProfileEditController)
     .controller('WaPontificatorController', WaPontificatorController)
     .controller('WaSourcesFilterSortController', WaSourcesFilterSortController)
+    .controller('WaTagFormInputController', WaTagFormInputController)
 
   function WaSplashController($state) {
     const vm = this;
@@ -154,17 +155,6 @@
         $state.go('sources')
       })
     }
-
-    vm.addTag = function(event) {
-      event.preventDefault();
-      vm.editSource.tags.push(vm.tagName);
-      delete vm.tagName;
-    }
-
-    vm.removeTag = function(tag) {
-      let index = vm.editSource.tags.indexOf(tag);
-      vm.editSource.tags.splice(index, 1);
-    }
   }
 
   function WaProfileController() {
@@ -190,5 +180,20 @@
 
   function WaSourcesFilterSortController() {
 
+  }
+
+  function WaTagFormInputController() {
+    const vm = this;
+
+    vm.addTag = function(event) {
+      event.preventDefault();
+      vm.tags.push(vm.tagName);
+      delete vm.tagName;
+    }
+
+    vm.removeTag = function(tag) {
+      let index = vm.tags.indexOf(tag);
+      vm.tags.splice(index, 1);
+    }
   }
 })();

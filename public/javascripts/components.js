@@ -61,6 +61,13 @@
       controller: 'WaSourcesFilterSortController',
       templateUrl: 'views/waSourcesFilterSort.html'
     })
+    .component('waTagFormInput', {
+      bindings: {
+        'tags': '='
+      },
+      controller: 'WaTagFormInputController',
+      templateUrl: 'views/waTagFormInput.html'
+    })
 
 
 })();
