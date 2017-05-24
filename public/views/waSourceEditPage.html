@@ -23,6 +23,12 @@
           <label for="notes">Notes</label>
           <textarea ng-model="$ctrl.editSource.notes" id="notes" class="form-control"></textarea>
         </div>
+        <div>
+          <label for="tags">Tags</label>
+          <input ng-model="$ctrl.tagName" id="journal" class="form-control">
+          <button ng-click="$ctrl.addTag($event)">Add Tag</button>
+          <span ng-repeat="tag in $ctrl.editSource.tags" class="label label-default">{{tag}} <a ng-click="$ctrl.removeTag(tag)">X</a></span>
+        </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">
           Update Source

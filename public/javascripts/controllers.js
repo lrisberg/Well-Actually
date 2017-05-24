@@ -154,6 +154,17 @@
         $state.go('sources')
       })
     }
+
+    vm.addTag = function(event) {
+      event.preventDefault();
+      vm.editSource.tags.push(vm.tagName);
+      delete vm.tagName;
+    }
+
+    vm.removeTag = function(tag) {
+      let index = vm.editSource.tags.indexOf(tag);
+      vm.editSource.tags.splice(index, 1);
+    }
   }
 
   function WaProfileController() {
