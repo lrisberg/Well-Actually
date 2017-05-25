@@ -64,6 +64,8 @@
       });
     }
 
+    vm.selectedTags = [];
+
     vm.sortOptions = [{
         display: 'Newest',
         property: '-created_at'
@@ -90,6 +92,10 @@
 
   function WaSourceController() {
     const vm = this;
+
+    vm.selectTag = function(tag) {
+      vm.selectedTags.push(tag);
+    }
 
   }
 
@@ -203,6 +209,12 @@
   }
 
   function WaSourcesFilterSortController() {
+    const vm = this;
+
+    vm.removeTag = function(tag) {
+      let index = vm.selectedTags.indexOf(tag);
+      vm.selectedTags.splice(index, 1);
+    }
 
   }
 

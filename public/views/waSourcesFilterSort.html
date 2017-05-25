@@ -2,6 +2,7 @@
   <li role="presentation" class="active">
     <input ng-model="$ctrl.filter" type="search" class="form-control input-sm search-form" placeholder="Filter">
   </li>
+  <li><span class="label label-default" ng-repeat="tag in $ctrl.selectedTags">{{tag}} <a ng-click="$ctrl.removeTag(tag)">x</a></span></li>
   <li role="presentation" class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 

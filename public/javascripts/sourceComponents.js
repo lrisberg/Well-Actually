@@ -14,7 +14,8 @@
     })
     .component('waSource', {
       bindings: {
-        'source': '='
+        'source': '=',
+        'selectedTags': '='
       },
       controller: 'WaSourceController',
       controllerAs: '$ctrl',
@@ -56,11 +57,25 @@
       bindings: {
         'sortOption': '=',
         'sortOptions': '=',
-        'filter': '='
+        'filter': '=',
+        'selectedTags': '='
       },
       controller: 'WaSourcesFilterSortController',
       templateUrl: 'views/waSourcesFilterSort.html'
     })
+    // .filterTags('selectedTags', function() {
+    //   return function(sources, tags) {
+    //     return sources.filter(function(source) {
+    //
+    //       for (let i in source.tags) {
+    //         if (tags.indexOf(source.tags[i]) != -1) {
+    //           return true;
+    //         }
+    //       }
+    //       return false;
+    //     });
+    //   };
+    // })
     .component('waTagFormInput', {
       bindings: {
         'tags': '='
