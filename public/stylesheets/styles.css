@@ -278,3 +278,16 @@ a:hover {
 .profileEditButtons {
   margin: 10px;
 }
+
+.profile-photo {
+  border-radius: 10px;
+}
+
+.bio-title {
+  margin-top: 2em;
+  font-size: 3em;
+}
+
+.bio {
+  font-size: 1.6em;
+}

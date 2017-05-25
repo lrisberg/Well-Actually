@@ -1,5 +1,15 @@
-<h1>Awesome Profile Page</h1>
+<wa-nav> </wa-nav>
+<div class="container">
 
-<a ui-sref="profileEdit">Edit Profile</a>
+        <h1 class="text-center col-md-11">Hi {{$ctrl.username}}</h1>
 
-<p><a ui-sref="sources">Back</a></p>
+        <img src="{{$ctrl.profilePhoto}}" alt="user image" class="profile-photo text-center center-block">
+        <h3 class="bio-title text-center">Bio</h3>
+        <p class="bio text-center">{{$ctrl.bio}}</p>
+
+</div>
+<!-- end of container -->
+
+<a ui-sref="sources" class="btn btn-info glyphicon glyphicon-triangle-left pull-left"></a>
+
+<a ui-sref="profileEdit" class="btn btn-info glyphicon glyphicon-pencil col-md-1 col-offset-md-11 pull-right"> </a>

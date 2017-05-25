@@ -198,8 +198,19 @@
     }
   }
 
-  function WaProfileController() {
+  function WaProfileController(SourceService) {
+    const vm = this
 
+    let userId = SourceService.getUserId(SourceService.getToken());
+
+    vm.$onInit = function(user) {
+      SourceService.getUser(userId).then((userData) => {
+        console.log(userData);
+        vm.profilePhoto = userData.photo
+        vm.bio = userData.bio
+        vm.username = userData.username
+      })
+    }
   }
 
   function WaProfileEditController() {
