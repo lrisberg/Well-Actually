@@ -9,36 +9,70 @@
     # ruby encoding: utf-8
     Source.create(
       user_id: 1,
-      title: 'The food-gut human axis: the effects of diet on gut microbiota and metabolome.',
-      link: 'https://www.ncbi.nlm.nih.gov/pubmed/28462705',
-      journal: 'Curr Med Chem',
-      abstract: 'Gut microbiota, the largest symbiont community hosted in human organism, is emerging as a pivotal player in the relationship between dietary habits and health. Oral and, especially, intestinal microbes metabolize dietary components, affecting human health by producing harmful or beneficial metabolites, which are involved in the incidence and progression of several intestinal related and non-related diseases. Habitual diet (Western, Agrarian and Mediterranean omnivore diets, vegetarian, vegan and gluten-free diets) drives the composition of the gut microbiota and metabolome. Within the dietary components, polymers (mainly fibers, proteins, fat and polyphenols) that are not hydrolyzed by human enzymes seem to be the main leads of the metabolic pathways of gut microbiota, which in turn directly influences the human metabolome. Specific relationships between diet and microbes, microbes and metabolites, microbes and immune functions and microbes and/or their metabolites and some human diseases are being established. Dietary treatments with fibers are the most effective to benefit the metabolome profile, by improving the synthesis of short chain fatty acids and decreasing the level of molecules, such as p-cresyl sulfate, indoxyl sulfate and trimethylamine N-oxide, involved in disease state. Based on the axis diet-microbiota-health, this review aims at describing the most recent knowledge oriented towards a profitable use of diet to provide benefits to human health, both directly and indirectly, through the activity of gut microbiota.',
-      notes: 'Veeeeery interesting',
+      title: 'Do all sedentary activities lead to weight gain: sleep does not.',
+      link: 'https://www.ncbi.nlm.nih.gov/pubmed/20823775',
+      journal: 'Curr Opin Clin Nutr Metab Care',
+      abstract: 'PURPOSE OF REVIEW:\n
+      To discuss the benefits of having a good night\'s sleep for body weight stability.\n
+      RECENT FINDINGS:\n
+      Experimental studies have shown that short-term partial sleep restriction decreases glucose tolerance, increases sympathetic tone, elevates cortisol concentrations, decreases the satiety hormone leptin, increases the appetite-stimulating hormone ghrelin, and increases hunger and appetite. Short sleep duration might increase the risk of becoming obese, because it does not allow the recovery of a hormonal profile facilitating appetite control. Lack of sleep could also lead to weight gain and obesity by increasing the time available for eating and by making the maintenance of a healthy lifestyle more difficult. Furthermore, the increased fatigue and tiredness associated with sleeping too little could lessen one\'s resolve to follow exercise regimens.\n
+      SUMMARY:\n
+      Short sleep duration appears to be a novel and independent risk factor for obesity. With the growing prevalence of chronic sleep restriction, any causal association between reduced sleep and obesity would have substantial importance from a public health standpoint. Future research is needed to determine whether sleep extension in sleep-deprived obese individuals will influence appetite control and/or reduce the amount of body fat.',
+      notes: 'Wow such science',
       wins: 1,
       friends_lost: 1,
-      tags: ["health", "diet"])
+      tags: ["health", "sleep", "obesity", "appetite", "body weight", "weight gain"])
     Source.create(
-      user_id: 2,
-      title: 'Short-Term Effects of Lupin vs. Whey Supplementation on Glucose and Insulin Responses to a Standardized Meal in a Randomized Cross-Over Trial.',
-      link: 'https://www.ncbi.nlm.nih.gov/pubmed/28443026',
-      journal: 'Front Physiol',
-      abstract: 'Background: Whey protein is known to reduce postprandial glycaemia in people with type 2 diabetes mellitus. Lupin as a vegetable source of protein could be considered as an alternative, as the percentage of vegetarian and vegan consumers is raising. The present study compares the acute glycemic effects of whey and lupin in healthy volunteers following a carbohydrate-rich reference meal. Methods In cross-over design, three standardized meals (reference meal; reference meal + whey; reference meal + lupin) were provided to 12 healthy male and female volunteers, aged between 23 and 33, in a balanced, randomized order. Volunteers\' blood glucose and insulin concentrations were analyzed at baseline and at seven time points following the ingestion of the meals. Results: The supplementation of whey or lupin significantly blunted the postprandial increase in blood glucose concentrations compared to the reference meal (p < 0.001). In the overall statistical analysis, this effect was comparable for whey and lupin [Δ AUC whey-lupin = 8%, 0-60 min area under the curve (0-60 min AUC), p = 0.937], with a blunting effect of -46% by whey (p = 0.005, 0-60 min AUC) and of -54% by lupin (p < 0.001, 0-60 min AUC). When comparing whey and lupin data only, the insulin increase was found to be more pronounced for whey protein than for lupin supplementation (Δ AUC whey-lupin = 39%, 0-60 min AUC, p = 0.022). However, when comparing the insulin response of each supplementation to the one of the reference meal, no differences could be detected (whey p = 0.259, 0-60 min AUC; lupin p = 0.275, 0-60 min AUC). Conclusions: Results suggest that lupin and whey can both lower the increase of postprandial blood glucose concentrations to a comparable extent, implying the usability of lupin to reduce postprandial glycaemia. However, the insulin response following the supplementations to a carbohydrate-rich meal seems to differ for these two protein sources.',
-      notes: 'Wow such science',
-      wins: 6,
-      friends_lost: 2,
-      tags: ["health", "diet"])
+      user_id: 1,
+      title: 'Occupational sitting and health risks: a systematic review.',
+      link: 'https://www.ncbi.nlm.nih.gov/pubmed/20837291',
+      journal: 'Am J Prev Med',
+      abstract: 'CONTEXT:\n
+      Emerging evidence suggests that sedentary behavior (i.e., time spent sitting) may be negatively associated with health. The aim of this study was to systematically review the evidence on associations between occupational sitting and health risks.\n
+      EVIDENCE ACQUISITION:\n
+      Studies were identified in March-April 2009 by literature searches in PubMed, PsycINFO, CENTRAL, CINAHL, EMBASE, and PEDro, with subsequent related-article searches in PubMed and citation searches in Web of Science. Identified studies were categorized by health outcome. Two independent reviewers assessed methodologic quality using a 15-item quality rating list (score range 0-15 points, higher score indicating better quality). Data on study design, study population, measures of occupational sitting, health risks, analyses, and results were extracted.\n
+      EVIDENCE SYNTHESIS:\n
+      43 papers met the inclusion criteria (21% cross-sectional, 14% case-control, 65% prospective); they examined the associations between occupational sitting and BMI (n=12); cancer (n=17); cardiovascular disease (CVD, n=8); diabetes mellitus (DM, n=4); and mortality (n=6). The median study-quality score was 12 points. Half the cross-sectional studies showed a positive association between occupational sitting and BMI, but prospective studies failed to confirm a causal relationship. There was some case-control evidence for a positive association between occupational sitting and cancer; however, this was generally not supported by prospective studies. The majority of prospective studies found that occupational sitting was associated with a higher risk of DM and mortality.\n
+      CONCLUSIONS:\n
+      Limited evidence was found to support a positive relationship between occupational sitting and health risks. The heterogeneity of study designs, measures, and findings makes it difficult to draw definitive conclusions at this time.',
+      notes: 'Being a programmer is an occupational hazard.',
+      wins: 2,
+      friends_lost: 1,
+      tags: ["health", "sitting", "standing", "cardiovascular", "diabetes", "cancer"])
+    Source.create(
+      user_id: 1,
+      title: 'Screen-based entertainment time, all-cause mortality, and cardiovascular events: population-based study with ongoing mortality and hospital events follow-up.',
+      link: 'https://www.ncbi.nlm.nih.gov/pubmed/21232666',
+      journal: 'J Am Coll Cardiol',
+      abstract: 'OBJECTIVES:\n
+      The aim of this study was to examine the independent relationships of television viewing or other screen-based entertainment ("screen time") with all-cause mortality and clinically confirmed cardiovascular disease (CVD) events. A secondary objective was to examine the extent to which metabolic (body mass index, high-density lipoprotein and total cholesterol) and inflammatory (C-reactive protein) markers mediate the relationship between screen time and CVD events.\n
+      BACKGROUND:\n
+      Although some evidence suggests that prolonged sitting is linked to CVD risk factor development regardless of physical activity participation, studies with hard outcomes are scarce.\n
+      METHODS:\n
+      A population sample of 4,512 (1,945 men) Scottish Health Survey 2003 respondents (≥35 years) were followed up to 2007 for all-cause mortality and CVD events (fatal and nonfatal combined). Main exposures were interviewer-assessed screen time (<2 h/day; 2 to <4 h/day; and ≥4 h/day) and moderate to vigorous intensity physical activity.\n
+      RESULTS:\n
+      Two hundred fifteen CVD events and 325 any-cause deaths occurred during 19,364 follow-up person-years. The covariable (age, sex, ethnicity, obesity, smoking, social class, long-standing illness, marital status, diabetes, hypertension)-adjusted hazard ratio (HR) for all-cause mortality was 1.52 (95% confidence interval [CI]: 1.06 to 2.16) and for CVD events was 2.30 (95% CI: 1.33 to 3.96) for participants engaging in ≥4 h/day of screen time relative to <2 h/day. Adjusting for physical activity attenuated these associations only slightly (all-cause mortality: HR: 1.48, 95% CI: 1.04 to 2.13; CVD events: HR: 2.25, 95% CI: 1.30 to 3.89). Exclusion of participants with CVD events in the first 2 years of follow-up and previous cancer registrations did not change these results appreciably. Approximately 25% of the association between screen time and CVD events was explained collectively by C-reactive protein, body mass index, and high-density lipoprotein cholesterol.\n
+      CONCLUSIONS:\n
+      Recreational sitting, as reflected by television/screen viewing time, is related to raised mortality and CVD risk regardless of physical activity participation. Inflammatory and metabolic risk factors partly explain this relationship.',
+      notes: 'Being a programmer is definitely an occupational hazard.',
+      wins: 2,
+      friends_lost: 0,
+      tags: ["health", "sitting", "standing", "cardiovascular", "diabetes", "cancer", "screen time"])
+    Source.create(
+      user_id: 1,
+      title: 'Television Viewing Time and Mortality',
+      link: 'http://circ.ahajournals.org/content/121/3/384',
+      journal: 'Circulation',
+      abstract: 'Background— Television viewing time, the predominant leisure-time sedentary behavior, is associated with biomarkers of cardiometabolic risk, but its relationship with mortality has not been studied. We examined the associations of prolonged television viewing time with all-cause, cardiovascular disease (CVD), cancer, and non-CVD/noncancer mortality in Australian adults.\n
+
+      Methods and Results— Television viewing time in relation to subsequent all-cause, CVD, and cancer mortality (median follow-up, 6.6 years) was examined among 8800 adults ≥25 years of age in the Australian Diabetes, Obesity and Lifestyle Study (AusDiab). During 58 087 person-years of follow-up, there were 284 deaths (87 CVD deaths, 125 cancer deaths). After adjustment for age, sex, waist circumference, and exercise, the hazard ratios for each 1-hour increment in television viewing time per day were 1.11 (95% confidence interval [CI], 1.03 to 1.20) for all-cause mortality, 1.18 (95% CI, 1.03 to 1.35) for CVD mortality, and 1.09 (95% CI, 0.96 to 1.23) for cancer mortality. Compared with a television viewing time of <2 h/d, the fully adjusted hazard ratios for all-cause mortality were 1.13 (95% CI, 0.87 to 1.36) for ≥2 to <4 h/d and 1.46 (95% CI, 1.04 to 2.05) for ≥4 h/d. For CVD mortality, corresponding hazard ratios were 1.19 (95% CI, 0.72 to 1.99) and 1.80 (95% CI, 1.00 to 3.25). The associations with both cancer mortality and non-CVD/noncancer mortality were not significant.\n
+
+      Conclusions— Television viewing time was associated with increased risk of all-cause and CVD mortality. In addition to the promotion of exercise, chronic disease prevention strategies could focus on reducing sitting time, particularly prolonged television viewing.',
+      wins: 5,
+      friends_lost: 1,
+      tags: ["health", "sitting", "standing", "cardiovascular", "diabetes", "cancer", "screen time"])
     User.create(
       email: 'admin@wa.com',
-      password: '123',
-      password_confirmation: '123'
-    )
-    User.create(
-      email: 'secondUser@wa.com',
-      password: '123',
-      password_confirmation: '123'
-    )
-    User.create(
-      email: 'thirdUser@wa.com',
       password: '123',
       password_confirmation: '123'
     )
@@ -69,7 +103,7 @@
     User.create(
       email: 'erica@actually.com',
       username: 'erica',
-      bio: 'Optimist says: the glass is half full. Pessimist says: the glass is half empty. The coder says: the glass is twice as big as it needs to be.',
+      bio: 'The optimist says: the glass is half full. The pessimist says: the glass is half empty. The coder says: the glass is twice as big as it needs to be.',
       photo: '',
       password: 'password',
       password_confirmation: 'password'

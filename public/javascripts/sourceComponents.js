@@ -74,7 +74,7 @@
             return true;
           }
 
-          for (selectedTag of selectedTags) {
+          for (let selectedTag of selectedTags) {
             if (!source.tags.includes(selectedTag)) {
               return false;
             }
