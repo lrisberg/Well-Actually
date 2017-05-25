@@ -15,22 +15,28 @@
                     <label for="photo">Photo</label>
                     <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
                 </div>
+
                 <div>
                     <label for="email">Email</label>
                     <input ng-model="$ctrl.newProfile.email" id="email" class="form-control">
                 </div>
+
                 <div>
                     <label for="password">Password</label>
                     <input type="password" ng-model="$ctrl.newPassword.email" id="password" placeholder="New Password" class="form-control">
                 </div>
-        </div>
-        <div class="profileEditButtons">
-            <span class="form-group ">
-  <button type="submit" class="btn btn-primary">Update Profile</button>
-          </span>
-            <a ui-sref="sources" class="btn btn-info">Cancel</a>
+                <div class="profileEditButtons">
+                  <span class="form-group ">
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                  </span>
+                  <span class="form-group">  <a ui-sref="sources" class="btn btn-info">Cancel</a></span>
+                </div>
+
+
             </form>
         </div>
+
+
     </div>
 
 

@@ -276,6 +276,5 @@ a:hover {
 /*====================*/
 
 .profileEditButtons {
-  align-content: center;
-  padding: 10px;
+  margin: 10px;
 }
