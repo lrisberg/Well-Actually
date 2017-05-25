@@ -42,3 +42,43 @@
       password: '123',
       password_confirmation: '123'
     )
+    User.create(
+      email: 'lauren@actually.com',
+      username: 'lauren',
+      bio: 'Logical fallacies, logical fallacies everywhere',
+      photo: 'https://media.makeameme.org/created/logical-fallacies-logical-vjzf7q.jpg',
+      password: 'password',
+      password_confirmation: 'password'
+    )
+    User.create(
+      email: 'tim@actually.com',
+      username: 'tim',
+      bio: 'No, your FACE is a logical fallacy!',
+      photo: '',
+      password: 'password',
+      password_confirmation: 'password'
+    )
+    User.create(
+      email: 'megan@actually.com',
+      username: 'megan',
+      bio: 'I love circular logic because I love circular logic',
+      photo: '',
+      password: 'password',
+      password_confirmation: 'password'
+    )
+    User.create(
+      email: 'erica@actually.com',
+      username: 'erica',
+      bio: 'Optimist says: the glass is half full. Pessimist says: the glass is half empty. The coder says: the glass is twice as big as it needs to be.',
+      photo: '',
+      password: 'password',
+      password_confirmation: 'password'
+    )
+    User.create(
+      email: 'heather@actually.com',
+      username: 'heather',
+      bio: 'If you don\'t agree with me, it means you haven\'t been listening.',
+      photo: '',
+      password: 'password',
+      password_confirmation: 'password'
+    )
