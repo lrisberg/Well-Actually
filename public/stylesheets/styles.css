@@ -52,7 +52,14 @@ a:visited {
     all: unset;
 }
 
+a:hover {
+  text-decoration: none;
+}
 
+#logoutHover:hover {
+  text-decoration: none;
+  color: white;
+}
 /*GOOGLE FONT SECTION*/
 
 
@@ -190,10 +197,6 @@ a:visited {
 
 .sidebar li:hover {
     color: white;
-}
-
-.sidebar li a:focus {
-    background-color: yellow;
 }
 
 #sidebartoggler {
