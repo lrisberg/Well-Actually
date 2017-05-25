@@ -5,6 +5,7 @@
     .service('AuthService', AuthService)
 
   function AuthService($http, $window) {
+
     this.login = function(user) {
       return $http.post('/authenticate', user).then((response) => {
         return response.data;
@@ -19,6 +20,10 @@
       return $http.post('/api/users', user).then((response) => {
         return response.data;
       });
+    }
+
+    this.logout = function() {
+      $window.localStorage.clear();
     }
   }
 
