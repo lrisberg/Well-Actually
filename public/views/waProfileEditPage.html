@@ -1,19 +1,19 @@
 <wa-nav></wa-nav>
 
-<div class="container">
+<div class="container profileEdit">
   <div class="row">
-    <div class="col-md-8">
+    <div class="">
 
 <h1>Edit Profile</h1>
 
 <div>
-<img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+<img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto text-center">
 </div>
 
 <form ng-submit="$ctrl.updateProfile()">
   <div>
     <label for="photo">Photo</label>
-    <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control">
+    <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
   </div>
 <div>
 <label for="email">Email</label>
