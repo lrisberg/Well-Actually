@@ -1,35 +1,37 @@
 <wa-nav></wa-nav>
 
 <div class="container profileEdit">
-  <div class="row">
-    <div class="">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-offset-md-3">
 
-<h1>Edit Profile</h1>
+            <h1>Edit Profile</h1>
 
-<div>
-<img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto text-center">
-</div>
+            <div class="center">
+                <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto text-center">
+            </div>
 
-<form ng-submit="$ctrl.updateProfile()">
-  <div>
-    <label for="photo">Photo</label>
-    <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
-  </div>
-<div>
-<label for="email">Email</label>
-<input ng-model="$ctrl.newProfile.email" id="email" class="form-control">
-</div>
-<div>
-<label for="password">Password</label>
-<input type="password" ng-model="$ctrl.newPassword.email" id="password" placeholder="New Password" class="form-control">
-</div>
-<div class="form-group">
+            <form ng-submit="$ctrl.updateProfile()">
+                <div>
+                    <label for="photo">Photo</label>
+                    <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input ng-model="$ctrl.newProfile.email" id="email" class="form-control">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" ng-model="$ctrl.newPassword.email" id="password" placeholder="New Password" class="form-control">
+                </div>
+        </div>
+        <div class="profileEditButtons">
+            <span class="form-group ">
   <button type="submit" class="btn btn-primary">Update Profile</button>
-</div>
-<a ui-sref="sources" class="btn btn-info">Cancel</a>
-</form>
-</div>
-</div>
+          </span>
+            <a ui-sref="sources" class="btn btn-info">Cancel</a>
+            </form>
+        </div>
+    </div>
 
 
 
