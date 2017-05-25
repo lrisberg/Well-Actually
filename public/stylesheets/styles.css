@@ -66,6 +66,15 @@ a:visited {
 }
 
 
+/*OVERALL NAVBAR*/
+.navbar {
+  height: 30px;
+}
+
+.navbar-brand {
+  margin: 0;
+}
+
 /*===================================================================*/
 
 

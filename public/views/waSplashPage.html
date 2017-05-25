@@ -1,3 +1,27 @@
+<nav >
+  <div class="splashNav">
+      <div class="navbar-header navbarTop gFont2">
+
+          <span class="signup">
+            <a href="#" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
+          </span>
+
+          <span class="login pull-right">
+            <a href="#" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
+          </span>
+
+      </div>
+
+      <div class="navbarSignup">
+          <wa-signup-form ng-if="$ctrl.toggleSignup"></wa-signup-form>
+      </div>
+
+      <div class="navbarLogin ">
+          <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>
+      </div>
+  </div>
+</nav>
+
 <div class="container">
 
 <!-- <wa-login-form></wa-login-form>
