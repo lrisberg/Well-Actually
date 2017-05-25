@@ -19,8 +19,23 @@
     const vm = this;
   }
 
-  function WaNavController($location, AuthService, $state) {
+  function WaNavController($location, AuthService, $state, SourceService) {
     const vm = this;
+
+    vm.$onInit = function() {
+
+      let userId = SourceService.getUserId(SourceService.getToken());
+
+      SourceService.getSources().then((response) => {
+        let wins = 0;
+        for (let i = 0; i < response.length; i++) {
+          if (response[i].user_id === userId) {
+            wins += response[i].wins
+          }
+        }
+        vm.wins = wins;
+      });
+    }
 
     vm.logout = function() {
       AuthService.logout();
