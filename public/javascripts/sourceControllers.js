@@ -85,6 +85,7 @@
 
   function WaSourceController() {
     const vm = this;
+
   }
 
 
@@ -108,12 +109,19 @@
     };
   }
 
-  function WaSourceShowController(SourceService, $stateParams) {
+  function WaSourceShowController(SourceService, $stateParams, $state) {
     const vm = this;
+
+    let userId = SourceService.getUserId(SourceService.getToken())
 
     vm.$onInit = function() {
       SourceService.getSource($stateParams.id).then((response) => {
-        vm.source = response;
+        if (response.user_id !== userId) {
+          $state.go('sources');
+        }
+        else {
+          vm.source = response;
+        }
       })
     }
 
@@ -134,9 +142,16 @@
   function WaSourceEditController(SourceService, $stateParams, $state) {
     const vm = this;
 
+    let userId = SourceService.getUserId(SourceService.getToken());
+
     vm.$onInit = function() {
       SourceService.getSource($stateParams.id).then((response) => {
-        vm.editSource = response;
+        if (response.user_id !== userId) {
+          $state.go('sources');
+        }
+        else {
+          vm.editSource = response;
+        }
       })
     }
 
