@@ -19,6 +19,7 @@ html, body {
 /*Need to fix color contrast*/
 
 * input {
+  margin: 0;
     border-color: rgba(0, 0, 0, 0.5) -webkit-border-radius: 4px !important;
     -moz-border-radius: 4px !important;
     border-radius: 4px !important;
@@ -28,6 +29,10 @@ html, body {
     -webkit-border-bottom: 4px !important;
     -moz-border-bottom: 4px !important;
     border-bottom: 4px !important;
+}
+
+.btn {
+  margin: 5px;
 }
 
 
@@ -71,9 +76,11 @@ a:visited {
   height: 30px;
 }
 
-.navbar-brand {
+.navTitle {
   margin: 0;
+  padding: 5px;
 }
+
 
 /*===================================================================*/
 
@@ -86,19 +93,15 @@ a:visited {
 .navbarTop {
     /*Color experiment*/
     background-color: rgba(48, 89, 145, 0.8);
-    /*Original color from last night*/
-    /*background-color: #D5F1EB;*/
     /*Added Font Stretch*/
     font-stretch: expanded;
     font-size: 20px;
     font-weight: 900;
     color: white;
     text-decoration: none;
-    padding: .9em;
+    /*padding: .9em;*/
     margin: 0;
     width: 100%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 /*THIS BACKGROUND DOES NOT SHOW UP ONCE YOU MAKE RESPONSIVE COLUMNS*/
@@ -152,7 +155,7 @@ a:visited {
 
 .sidebar {
     position: fixed;
-    top: 45px;
+    top: 50px;
     bottom: 0px;
     right: -180px;
     -webkit-transition: all 0.15s ease-out 0;
