@@ -1,57 +1,39 @@
-<nav>
-    <div class="navbar-header navbarTop">
-        <span class="signup">
-      <a href="#" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
-    </span>
-        <span class="login pull-right">
-        <a href="#" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
-      </span>
-    </div>
-    <div class="navbar-header navbarSignup" >
+<!-- ================================================= -->
+<!-- SPLASH NAVBAR -->
 
-      <wa-signup-form ng-if="$ctrl.toggleSignup"></wa-signup-form>
-        <!-- <form class="" action="index.html" method="post">
-            <span class=""><input type="" name="" value=""></span>
-            <span class="pull-right"><input ng-model="$ctrl.signupDetails.password" type="password" name="" value=""></span>
-        </form> -->
+<!-- Add ng-if logic for splash page and default to the other NAVBAR -->
+<!-- May have to used something like $routeChangeSuccess or $locationChangeSuccess or $location  location.path or ng-switch-when and ng-default -->
 
-    </div>
-    <div class="navbar-header navbarLogin">
-        <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>
-        <!-- <input type="text" name="" value="">
-        <input type="text" name="" value=""> -->
-    </div>
+<nav >
+  <div class="splashNav">
+      <div class="navbar-header navbarTop gFont2">
+
+          <span class="signup">
+            <a href="#" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
+          </span>
+
+          <span class="login pull-right">
+            <a href="#" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
+          </span>
+
+      </div>
+
+      <div class="navbarSignup">
+          <wa-signup-form ng-if="$ctrl.toggleSignup"></wa-signup-form>
+      </div>
+
+      <div class="navbarLogin ">
+          <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>  
+      </div>
+  </div>
 </nav>
 
+
+<!-- ================================================= -->
+<!-- NAVBAR -->
+
 <!--
-<nav class="navbar navbar-default" role="navigation">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#top">.navbar-toggle.x</a>
-</div>
-
-<div class="collapse navbar-collapse" id="navbar-collapse-x">
-<ul class="nav navbar-nav navbar-right">
-<li data-toggle="collapse" data-target="#navbar-collapse.in"><a href="#top">Link</a></li>
-<li data-toggle="collapse" data-target="#navbar-collapse.in"><a href="#top">Link</a></li>
-</ul>
-</div>< .navbar-collapse -->
-<!-- </nav> -->
-
-
-
-
-
-
-
-
-
-
-<!-- <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand">Well-Actually</a>
