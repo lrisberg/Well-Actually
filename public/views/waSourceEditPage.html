@@ -6,25 +6,57 @@
 
       <form ng-submit="$ctrl.updateSource()">
         <div>
+
+          <!-- TITLE -->
           <label for="title">Title</label>
-          <input ng-model="$ctrl.editSource.title" id="title" class="form-control">
+          <input
+          ng-model="$ctrl.editSource.title"
+          id="title"
+          required
+          class="form-control">
         </div>
+
+        <!-- LINK -->
         <div>
           <label for="link">Link</label>
-          <input ng-model="$ctrl.editSource.link" id="link" class="form-control">
+          <input
+          ng-model="$ctrl.editSource.link"
+          id="link"
+          required
+          type="url"
+          class="form-control">
         </div>
+
+        <!-- ABSTRACT -->
         <div>
           <label for="abstract">Abstract</label>
-          <textarea ng-model="$ctrl.editSource.abstract" id="abstract" class="form-control"></textarea>
+          <textarea
+          ng-model="$ctrl.editSource.abstract"
+          id="abstract"
+          class="form-control">
+          </textarea>
         </div>
+
+        <!-- JOURNAL -->
         <div>
           <label for="journal">Journal</label>
-          <input ng-model="$ctrl.editSource.journal" id="journal" class="form-control">
+          <input
+          ng-model="$ctrl.editSource.journal"
+          id="journal"
+          class="form-control">
         </div>
+
+        <!-- NOTES -->
         <div>
           <label for="notes">Notes</label>
-          <textarea ng-model="$ctrl.editSource.notes" id="notes" class="form-control"></textarea>
+          <textarea
+          ng-model="$ctrl.editSource.notes"
+          id="notes"
+          class="form-control">
+          </textarea>
         </div>
+
+        <!-- TAGS -->
         <wa-tag-form-input tags="$ctrl.editSource.tags"></wa-tag-form-input>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">
