@@ -252,6 +252,18 @@ a:visited {
 
 /*===================================================================*/
 
+/*SOURCES PAGE*/
+
+.abstract {
+  height: 120px;
+  overflow-y: scroll;
+}
+
+/*.media-body {
+  margin: auto;
+}*/
+
+
 /*EDIT PROFILE PAGE*/
 
 /*====================*/

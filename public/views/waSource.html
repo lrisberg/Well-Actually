@@ -1,26 +1,30 @@
 <!-- If stuff doesn't work look at whether you need to locate variables on $ctrl -->
 
 <div class="row">
-  <div class="col-md-12">
+    <div class="col-md-12">
 
-    <div class="well">
-      <div class="media-left">
-        <img class="media-object">
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">
-          <a ui-sref="sourceShow({ id: $ctrl.source.id })">{{$ctrl.source.title}}</a>
+        <div class="well">
 
-          |
-          <a ui-sref="sourceEdit({ id: $ctrl.source.id })">edit</a>
-        </h4>
-        <a href="{{$ctrl.source.link}}">Go to the Source!</a>
-        <p>
-          {{$ctrl.source.abstract}}
-        </p>
-        <p><span class="label label-default" ng-repeat="tag in $ctrl.source.tags" ng-click="$ctrl.selectTag(tag)">{{tag}}</span></p>
-      </div>
+            <div class="media-left">
+                <img class="media-object">
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">
+                  <a ui-sref="sourceShow({ id: $ctrl.source.id })">{{$ctrl.source.title}}</a>
+
+                  |
+                  <a ui-sref="sourceEdit({ id: $ctrl.source.id })">edit</a>
+                </h4>
+
+                <a href="{{$ctrl.source.link}}">Go to the Source!</a>
+
+                <p class="abstract">
+                    {{$ctrl.source.abstract}}
+                </p>
+                <p><span class="label label-default" ng-repeat="tag in $ctrl.source.tags" ng-click="$ctrl.selectTag(tag)">{{tag}}</span></p>
+            </div>
+        </div>
+
     </div>
-
-  </div>
 </div>
