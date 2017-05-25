@@ -23,7 +23,7 @@
       </div>
 
       <div class="navbarLogin ">
-          <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>  
+          <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>
       </div>
   </div>
 </nav>
@@ -32,8 +32,8 @@
 <!-- ================================================= -->
 <!-- NAVBAR -->
 
-<!--
-<nav class="navbar navbar-default">
+
+<!-- <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand">Well-Actually</a>
@@ -65,7 +65,7 @@
                     <li><a ui-sref="profileEdit" ng-click="$ctrl.retractMenu()">Edit Profile</a></li>
                     <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li>
                     <hr>
-                    <li><a ui-sref="#">Logout</a></li>
+                    <li><a ng-click="$ctrl.logout()">Logout</a></li>
                 </ul>
             </div>
 

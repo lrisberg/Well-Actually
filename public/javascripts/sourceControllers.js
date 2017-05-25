@@ -19,8 +19,13 @@
     const vm = this;
   }
 
-  function WaNavController($location) {
+  function WaNavController($location, AuthService, $state) {
     const vm = this;
+
+    vm.logout = function() {
+      AuthService.logout();
+      $state.go('splash')
+    }
 
     // vm.location = $location;
     //
