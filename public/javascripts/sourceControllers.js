@@ -186,10 +186,18 @@
 
     vm.getSynonyms = function(word) {
       SourceService.getSynonyms(word).then((response) => {
+        console.log(response);
+        let wordArray = [];
+        let categoryArray = [];
         let data = response;
         for (key in data) {
-          vm.synonyms = data[key].syn;
+          categoryArray.push(key);
+          for (word of data[key].syn) {
+            wordArray.push(word);
+          }
         }
+        vm.synonyms = wordArray;
+        vm.categories = categoryArray;
       })
     }
   }

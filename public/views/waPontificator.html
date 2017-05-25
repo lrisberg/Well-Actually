@@ -1,5 +1,9 @@
-<div class="pull-left">
-  <p><input ng-model="$ctrl.word" type="text">
-    <span ng-repeat="word in $ctrl.synonyms">{{word}}, </span>
-  <a class="btn btn-info" ng-click="$ctrl.getSynonyms($ctrl.word)">Pontificate!</a></p>
+<div>
+  <p><input ng-model="$ctrl.word" type="text"></p>
+
+  <div class="text-center">
+    <a class="btn btn-info text-center" ng-click="$ctrl.getSynonyms($ctrl.word)">Pontificate!</a>
+  </div>
+  <!-- <p><span>{{$ctrl.categories[0]}}</span></p> -->
+  <p ng-repeat="word in $ctrl.synonyms track by $index">{{word}} </p>
 </div>
