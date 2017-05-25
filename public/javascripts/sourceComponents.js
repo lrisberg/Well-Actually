@@ -63,19 +63,25 @@
       controller: 'WaSourcesFilterSortController',
       templateUrl: 'views/waSourcesFilterSort.html'
     })
-    // .filterTags('selectedTags', function() {
-    //   return function(sources, tags) {
-    //     return sources.filter(function(source) {
-    //
-    //       for (let i in source.tags) {
-    //         if (tags.indexOf(source.tags[i]) != -1) {
-    //           return true;
-    //         }
-    //       }
-    //       return false;
-    //     });
-    //   };
-    // })
+    .filter('filterByTags', function() {
+      return function(sources, tags) {
+        if (sources === undefined) {
+          return;
+        }
+
+        return sources.filter(function(source) {
+          if (tags.length === 0) {
+            return true;
+          }
+          for (let i in source.tags) {
+            if (tags.indexOf(source.tags[i]) != -1) {
+              return true;
+            }
+          }
+          return false;
+        });
+      };
+    })
     .component('waTagFormInput', {
       bindings: {
         'tags': '='

@@ -113,7 +113,7 @@
     }
 
     vm.createSource = function() {
-      vm.newSource.user_id = getUserId(getToken());
+      vm.newSource.user_id = SourceService.getUserId(SourceService.getToken());
       SourceService.createSource(vm.newSource).then((response) => {
         $state.go('sources');
       });
