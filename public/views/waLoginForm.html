@@ -1,7 +1,7 @@
-<a ng-click="$ctrl.toggleLoginForm()">Login</a>
+<!-- <a ng-click="$ctrl.toggleLoginForm()">Login</a> -->
 
 <div class="container">
-  <form ng-if="$ctrl.showLoginForm" ng-submit="$ctrl.submitLogin()">
+  <form ng-submit="$ctrl.submitLogin()">
     <div>
       <label for="email">email</label>
       <input ng-model="$ctrl.loginDetails.email" class="form-control">
@@ -17,3 +17,6 @@
     </div>
   </form>
 </div>
+
+
+<!-- ng-if="$ctrl.showLoginForm"  -->

@@ -1,54 +1,92 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-
-      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button> -->
-      <a class="navbar-brand">Well-Actually</a>
+<nav>
+    <div class="navbar-header navbarTop">
+        <span class="signup">
+      <a href="#" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
+    </span>
+        <span class="login pull-right">
+        <a href="#" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
+      </span>
     </div>
+    <div class="navbar-header navbarSignup" >
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <wa-signup-form ng-if="$ctrl.toggleSignup"></wa-signup-form>
+        <!-- <form class="" action="index.html" method="post">
+            <span class=""><input type="" name="" value=""></span>
+            <span class="pull-right"><input ng-model="$ctrl.signupDetails.password" type="password" name="" value=""></span>
+        </form> -->
+
     </div>
-  </div>
-  <div ng-if="$ctrl.showMenu">
-    <input type="checkbox" ng-model="$ctrl.menuToggler" id="sidebartoggler" name="" value="">
+    <div class="navbar-header navbarLogin">
+        <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>
+        <!-- <input type="text" name="" value="">
+        <input type="text" name="" value=""> -->
+    </div>
+</nav>
 
-    <div class="page-wrap">
+<!--
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#top">.navbar-toggle.x</a>
+</div>
 
-      <label for="sidebartoggler" class="toggle">
-      <div class="hamb">
-      </div>
-      <div class="hamb" style="">
-      </div>
-      <div class="hamb">
-      </div>
+<div class="collapse navbar-collapse" id="navbar-collapse-x">
+<ul class="nav navbar-nav navbar-right">
+<li data-toggle="collapse" data-target="#navbar-collapse.in"><a href="#top">Link</a></li>
+<li data-toggle="collapse" data-target="#navbar-collapse.in"><a href="#top">Link</a></li>
+</ul>
+</div>< .navbar-collapse -->
+<!-- </nav> -->
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Well-Actually</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        </div>
+    </div>
+    <div ng-if="$ctrl.showMenu">
+        <input type="checkbox" ng-model="$ctrl.menuToggler" id="sidebartoggler" name="" value="">
+
+        <div class="page-wrap">
+
+            <label for="sidebartoggler" class="toggle">
+        <div class="glyphicon glyphicon-option-vertical">
+
+        </div>
     </label>
 
-
-
-
-
-      <div class="sidebar">
-        <ul>
-          <li>
-            <div>
-              <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+                        </div>
+                    </li>
+                    <li>Wins: tba</li>
+                    <hr>
+                    <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
+                    <li><a ui-sref="profileEdit" ng-click="$ctrl.retractMenu()">Edit Profile</a></li>
+                    <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li>
+                    <hr>
+                    <li><a ui-sref="#">Logout</a></li>
+                </ul>
             </div>
-          </li>
-          <li>Wins: tba</li>
-          <hr>
-          <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
-          <li><a ui-sref="profileEdit" ng-click="$ctrl.retractMenu()">Edit Profile</a></li>
-          <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li>
-          <hr>
-          <li><a ui-sref="#">Logout</a></li>
-        </ul>
-      </div>
 
+        </div>
     </div>
-  </div>
-</nav>
+</nav> -->

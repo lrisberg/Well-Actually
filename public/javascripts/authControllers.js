@@ -9,9 +9,9 @@
   function WaLoginFormController($state, AuthService) {
     const vm = this;
 
-    vm.toggleLoginForm = function() {
-      vm.showLoginForm = !vm.showLoginForm;
-    }
+    // vm.toggleLoginForm = function() {
+    //   vm.showLoginForm = !vm.showLoginForm;
+    // }
 
     vm.submitLogin = function() {
       AuthService.login(vm.loginDetails).then((token) => {
@@ -24,9 +24,6 @@
   function WaSignupFormController($state, AuthService) {
     const vm = this;
 
-    vm.toggleSignupForm = function() {
-      vm.showSignupForm = !vm.showSignupForm;
-    }
 
     vm.submitSignup = function() {
       let submitUser = {
