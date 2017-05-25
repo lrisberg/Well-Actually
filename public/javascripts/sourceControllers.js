@@ -26,6 +26,10 @@
 
       let userId = SourceService.getUserId(SourceService.getToken());
 
+      SourceService.getUser(userId).then((userData) => {
+        vm.userPhoto = userData.photo
+      })
+
       SourceService.getSources().then((response) => {
         let wins = 0;
         for (let i = 0; i < response.length; i++) {

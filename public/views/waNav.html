@@ -52,13 +52,13 @@
                 <ul>
                     <li>
                         <div>
-                            <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto">
+                            <img src="$ctrl.userPhoto" alt="user image" class="menuPhoto">
                         </div>
                     </li>
                     <li>Wins: {{$ctrl.wins}}</li>
                     <hr>
                     <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
-                    <li><a ui-sref="profileEdit" ng-click="$ctrl.retractMenu()">Edit Profile</a></li>
+                    <li><a ui-sref="profileEdit" ng-click="$ctrl.retractMenu()">Profile</a></li>
                     <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li>
                     <hr>
                     <li><a ng-click="$ctrl.logout()">Logout</a></li>

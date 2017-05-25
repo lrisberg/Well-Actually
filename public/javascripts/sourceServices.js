@@ -64,7 +64,20 @@
       let user_id = JSON.parse($window.atob(payload)).user_id;
       return user_id;
     }
+
+
+  this.getUser = function(userId) {
+    return $http.get(`/api/users/${userId}`).then((user) => {
+      return user.data
+    }).catch(err => err)
+    }
   }
+
+  // this.getSource = function(sourceId) {
+  //   return $http.get(`${BASE_URL}/${sourceId}`).then((response) => {
+  //     return response.data;
+  //   })
+  // }
 
   SourceService.$inject = ["$http", "$window"];
 
