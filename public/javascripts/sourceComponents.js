@@ -64,21 +64,22 @@
       templateUrl: 'views/waSourcesFilterSort.html'
     })
     .filter('filterByTags', function() {
-      return function(sources, tags) {
+      return function(sources, selectedTags) {
         if (sources === undefined) {
           return;
         }
 
         return sources.filter(function(source) {
-          if (tags.length === 0) {
+          if (selectedTags.length === 0) {
             return true;
           }
-          for (let i in source.tags) {
-            if (tags.indexOf(source.tags[i]) != -1) {
-              return true;
+
+          for (selectedTag of selectedTags) {
+            if (!source.tags.includes(selectedTag)) {
+              return false;
             }
           }
-          return false;
+          return true;
         });
       };
     })
