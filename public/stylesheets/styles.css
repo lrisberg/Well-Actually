@@ -262,6 +262,10 @@ a:hover {
   overflow-y: scroll;
 }
 
+.tags {
+  background-color: rgba(87,199,148, 0.6);
+  margin:2px;
+}
 /*.media-body {
   margin: auto;
 }*/
