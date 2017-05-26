@@ -9,6 +9,24 @@
     # ruby encoding: utf-8
     Source.create(
       user_id: 2,
+      title: 'Effects of black current anthocyanoside intake on dark adaptation and VDT work-induced transient refractive alteration in healthy humans.',
+      link: 'https://www.ncbi.nlm.nih.gov/pubmed/11134978',
+      journal: 'Altern Med Rev',
+      abstract: 'The effects of oral intake of a black currant anthocyanosides (BCA) concentrate on dark adaptation, video display terminal (VDT) work-induced transient refractive alteration, and subjective asthenopia symptoms (visual fatigue) were examined in a double-blind, placebo-controlled, crossover study with healthy human subjects. In a dark adaptation study, intake of BCA at three dose levels (12.5-, 20-, and 50 mg/subject, n = 12) appeared to bring about dose-dependent lowering of the dark adaptation threshold. Statistical analysis comparing the values before and after intake indicated there was a significant difference at the 50 mg dose (p= 0. 011). Comparing the refraction values for the dominant eye, BCA intake (50 mg/subject, n = 21) resulted in no decrease in the average value after the visual task; whereas, a placebo trial resulted in a large decrease in the average value, resulting in borderline significance (p = 0.064). In the assessment of subjective asthenopia symptoms by questionnaire, significant improvement was recognized on the basis of the statements regarding the eye and lower back after BCA intake.',
+      wins: 7,
+      friends_lost: 0,
+      tags: ["eye health", "eye strain", "computer eye strain", "berries", "anthocyanins"])
+    Source.create(
+      user_id: 2,
+      title: 'Comparison of nutritional quality of the vegan, vegetarian, semi-vegetarian, pesco-vegetarian and omnivorous diet',
+      link: 'https://www.ncbi.nlm.nih.gov/pubmed/24667136',
+      journal: 'Nutrients',
+      abstract: 'The number of studies comparing nutritional quality of restrictive diets is limited. Data on vegan subjects are especially lacking. It was the aim of the present study to compare the quality and the contributing components of vegan, vegetarian, semi-vegetarian, pesco-vegetarian and omnivorous diets. Dietary intake was estimated using a cross-sectional online survey with a 52-items food frequency questionnaire (FFQ). Healthy Eating Index 2010 (HEI-2010) and the Mediterranean Diet Score (MDS) were calculated as indicators for diet quality. After analysis of the diet questionnaire and the FFQ, 1475 participants were classified as vegans (n = 104), vegetarians (n = 573), semi-vegetarians (n = 498), pesco-vegetarians (n = 145), and omnivores (n = 155). The most restricted diet, i.e., the vegan diet, had the lowest total energy intake, better fat intake profile, lowest protein and highest dietary fiber intake in contrast to the omnivorous diet. Calcium intake was lowest for the vegans and below national dietary recommendations. The vegan diet received the highest index values and the omnivorous the lowest for HEI-2010 and MDS. Typical aspects of a vegan diet (high fruit and vegetable intake, low sodium intake, and low intake of saturated fat) contributed substantially to the total score, independent of the indexing system used. The score for the more prudent diets (vegetarians, semi-vegetarians and pesco-vegetarians) differed as a function of the used indexing system but they were mostly better in terms of nutrient quality than the omnivores.',
+      wins: 1,
+      friends_lost: 0,
+      tags: ["health", "diet", "vegan", "vegetarian", "nutrients", "omnivores", "healthy eating"])
+    Source.create(
+      user_id: 2,
       title: 'Do all sedentary activities lead to weight gain: sleep does not.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/20823775',
       journal: 'Curr Opin Clin Nutr Metab Care',
@@ -80,24 +98,6 @@
       wins: 6,
       friends_lost: 1,
       tags: ["health", "sitting", "standing", "standing desks", "productivity", "workplace"])
-    Source.create(
-      user_id: 2,
-      title: 'Effects of black current anthocyanoside intake on dark adaptation and VDT work-induced transient refractive alteration in healthy humans.',
-      link: 'https://www.ncbi.nlm.nih.gov/pubmed/11134978',
-      journal: 'Altern Med Rev',
-      abstract: 'The effects of oral intake of a black currant anthocyanosides (BCA) concentrate on dark adaptation, video display terminal (VDT) work-induced transient refractive alteration, and subjective asthenopia symptoms (visual fatigue) were examined in a double-blind, placebo-controlled, crossover study with healthy human subjects. In a dark adaptation study, intake of BCA at three dose levels (12.5-, 20-, and 50 mg/subject, n = 12) appeared to bring about dose-dependent lowering of the dark adaptation threshold. Statistical analysis comparing the values before and after intake indicated there was a significant difference at the 50 mg dose (p= 0. 011). Comparing the refraction values for the dominant eye, BCA intake (50 mg/subject, n = 21) resulted in no decrease in the average value after the visual task; whereas, a placebo trial resulted in a large decrease in the average value, resulting in borderline significance (p = 0.064). In the assessment of subjective asthenopia symptoms by questionnaire, significant improvement was recognized on the basis of the statements regarding the eye and lower back after BCA intake.',
-      wins: 7,
-      friends_lost: 0,
-      tags: ["eye health", "eye strain", "computer eye strain", "berries", "anthocyanins"])
-    Source.create(
-      user_id: 2,
-      title: 'Comparison of nutritional quality of the vegan, vegetarian, semi-vegetarian, pesco-vegetarian and omnivorous diet',
-      link: 'https://www.ncbi.nlm.nih.gov/pubmed/24667136',
-      journal: 'Nutrients',
-      abstract: 'The number of studies comparing nutritional quality of restrictive diets is limited. Data on vegan subjects are especially lacking. It was the aim of the present study to compare the quality and the contributing components of vegan, vegetarian, semi-vegetarian, pesco-vegetarian and omnivorous diets. Dietary intake was estimated using a cross-sectional online survey with a 52-items food frequency questionnaire (FFQ). Healthy Eating Index 2010 (HEI-2010) and the Mediterranean Diet Score (MDS) were calculated as indicators for diet quality. After analysis of the diet questionnaire and the FFQ, 1475 participants were classified as vegans (n = 104), vegetarians (n = 573), semi-vegetarians (n = 498), pesco-vegetarians (n = 145), and omnivores (n = 155). The most restricted diet, i.e., the vegan diet, had the lowest total energy intake, better fat intake profile, lowest protein and highest dietary fiber intake in contrast to the omnivorous diet. Calcium intake was lowest for the vegans and below national dietary recommendations. The vegan diet received the highest index values and the omnivorous the lowest for HEI-2010 and MDS. Typical aspects of a vegan diet (high fruit and vegetable intake, low sodium intake, and low intake of saturated fat) contributed substantially to the total score, independent of the indexing system used. The score for the more prudent diets (vegetarians, semi-vegetarians and pesco-vegetarians) differed as a function of the used indexing system but they were mostly better in terms of nutrient quality than the omnivores.',
-      wins: 1,
-      friends_lost: 0,
-      tags: ["health", "diet", "vegan", "vegetarian", "nutrients", "omnivores", "healthy eating"])
     User.create(
       email: 'admin@wa.com',
       password: '123',
