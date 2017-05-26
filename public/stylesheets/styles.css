@@ -91,6 +91,7 @@ a:hover {
 .navTitle {
   margin: 0;
   padding: 5px;
+  font-family: "Monoton", "Ubuntu", sans-serif;
 }
 
 
@@ -155,7 +156,7 @@ a:hover {
 .toggle {
     text-decoration: none;
     /*font-size: 30px;*/
-    color: black;
+    color: white;
     -webkit-transition: all 0.15s ease-out 0;
     -moz-transition: all 0.15s ease-out 0;
     transition: all 0.15s ease-out 0;
@@ -267,12 +268,13 @@ a:hover {
 .abstract {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 1.2em;
   max-height: 120px;
   overflow-y: scroll;
 }
 
 .tags {
-  background-color: rgba(244, 103, 52, 1);
+  background-color: rgba(194, 59, 10, 1);
   margin: 2px;
   font-size: 1rgba(244, 103, 52, 1)em;
   box-shadow: 10px 5px 5px rgba(159, 143, 137, 0.98);
@@ -365,4 +367,9 @@ a:hover {
 
 .title {
   font-weight: 600;
+}
+
+.icon {
+  margin-left: .5em;
+  margin-right: .5em;
 }
