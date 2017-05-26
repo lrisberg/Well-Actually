@@ -32,7 +32,8 @@
     vm.$onInit = function() {
 
       SourceService.getUser(userId).then((userData) => {
-        vm.userPhoto = userData.photo
+        vm.userPhoto = userData.photo;
+        vm.username = userData.username;
       })
 
       SourceService.getSources().then((response) => {
