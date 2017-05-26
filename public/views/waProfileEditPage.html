@@ -7,24 +7,34 @@
             <h1>Edit Profile</h1>
 
             <div class="center">
-                <img src="https://www.asist.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="user image" class="menuPhoto text-center">
+                <img src="{{$ctrl.user.photo}}" alt="user image" class="menuPhoto text-center">
             </div>
 
             <form ng-submit="$ctrl.updateProfile()">
                 <div>
-                    <label for="photo">Photo</label>
-                    <input ng-model="$ctrl.newProfile.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
+                    <label for="photo">Photo URL</label>
+                    <input ng-model="$ctrl.user.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
+                </div>
+
+                <div>
+                    <label for="username">Username</label>
+                    <input ng-model="$ctrl.user.username" id="username" class="form-control">
                 </div>
 
                 <div>
                     <label for="email">Email</label>
-                    <input ng-model="$ctrl.newProfile.email" id="email" class="form-control">
+                    <input ng-model="$ctrl.user.email" id="email" class="form-control">
                 </div>
 
                 <div>
+                    <label for="bio">Bio</label>
+                    <textarea ng-model="$ctrl.user.bio" class="form-control"></textarea>
+                </div>
+
+                <!-- <div>
                     <label for="password">Password</label>
                     <input type="password" ng-model="$ctrl.newPassword.email" id="password" placeholder="New Password" class="form-control">
-                </div>
+                </div> -->
                 <div class="profileEditButtons">
                   <span class="form-group ">
                     <button type="submit" class="btn btn-primary">Update Profile</button>

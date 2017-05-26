@@ -235,8 +235,16 @@
     }
   }
 
-  function WaProfileEditController() {
+  function WaProfileEditController(SourceService) {
     const vm = this;
+
+    let userId = SourceService.getUserId(SourceService.getToken());
+
+    vm.$onInit = function() {
+      SourceService.getUser(userId).then((userData) => {
+        vm.user = userData;
+      })
+    }
   }
 
   function WaPontificatorController(SourceService) {
