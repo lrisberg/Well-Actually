@@ -411,12 +411,13 @@ a:hover {
 
 .spashLogo {
   height: 100%;
+  width: 100%;
 }
 
 .upperArrows {
   position: absolute;
   /*height: 90%*/
-  width: 89%;
+  width: 98%;
   bottom: 0;
   /*margin: auto;*/
 }
