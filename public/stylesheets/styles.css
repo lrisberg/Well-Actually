@@ -249,7 +249,7 @@ a:hover {
 
 /*BACKGROUND*/
 
-.logo {
+/*.logo {
     background-image: url('../../images/well_actually_logo_lg.gif');
     display: block;
     background-position: center;
@@ -260,7 +260,7 @@ a:hover {
     min-height: 350px;
     max-height: 500px;
     height: auto;
-}
+}*/
 
 /*===================================================================*/
 
@@ -396,4 +396,37 @@ a:hover {
 
 .cancelBtn {
   color: white !important;
+}
+
+
+/*Upper Section of Splash Page*/
+.logoImg img {
+  max-width: 400px;
+  min-width: 100px;
+  width: 85%;
+  display: block;
+  padding-top: 25%;
+  margin: auto;
+}
+
+.spashLogo {
+  height: 100%;
+}
+
+.upperArrows {
+  position: absolute;
+  /*height: 90%*/
+  width: 85%;
+  bottom: 0;
+  /*margin: auto;*/
+}
+
+.upperArrowRight {
+  float: left;
+  display: inline-block;
+}
+
+.upperArrowRight {
+  float: right;
+  display: inline-block;
 }
