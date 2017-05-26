@@ -19,9 +19,9 @@
 
                 <a href="{{$ctrl.source.link}}">Go to the Source!</a>
 
-                <p class="abstract">
-                    {{$ctrl.source.abstract}}
-                </p>
+                <div class="abstract">
+                  <p ng-repeat="paragraph in $ctrl.abstractArray track by $index">{{paragraph}}</p>
+                </div>
                 <p><span class="label label-default tags" ng-repeat="tag in $ctrl.source.tags" ng-click="$ctrl.selectTag(tag)">{{tag}}</span></p>
             </div>
         </div>

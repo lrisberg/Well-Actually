@@ -119,6 +119,20 @@
   function WaSourceController() {
     const vm = this;
 
+    vm.$onInit = function() {
+
+      let abstract = vm.source.abstract;
+
+      let abstractArray = abstract.split('\n');
+      vm.abstractArray = abstractArray.map((paragraph) => {
+        paragraph = paragraph.trim();
+        if (paragraph.endsWith('\\n')) {
+          paragraph = paragraph.slice(0, (paragraph.length - 2))
+        }
+        return paragraph;
+      })
+    }
+
     vm.selectTag = function(tag) {
       vm.selectedTags.push(tag);
     }
@@ -208,9 +222,12 @@
 
     let userId = SourceService.getUserId(SourceService.getToken());
 
+    vm.user = {
+      id: userId
+    }
+
     vm.$onInit = function(user) {
       SourceService.getUser(userId).then((userData) => {
-        console.log(userData);
         vm.profilePhoto = userData.photo
         vm.bio = userData.bio
         vm.username = userData.username
@@ -219,7 +236,7 @@
   }
 
   function WaProfileEditController() {
-
+    const vm = this;
   }
 
   function WaPontificatorController(SourceService) {

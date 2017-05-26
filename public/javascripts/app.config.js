@@ -42,8 +42,7 @@
       })
       .state({
         name: 'profileEdit',
-        //add id later
-        url: '/profile/edit',
+        url: '/profile/:id/edit',
         component: 'waProfileEdit'
       })
   }
