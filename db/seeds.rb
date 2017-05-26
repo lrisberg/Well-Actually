@@ -8,7 +8,7 @@
 
     # ruby encoding: utf-8
     Source.create(
-      user_id: 5,
+      user_id: 2,
       title: 'Effects of black current anthocyanoside intake on dark adaptation and VDT work-induced transient refractive alteration in healthy humans.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/11134978',
       journal: 'Altern Med Rev',
@@ -106,8 +106,8 @@
     User.create(
       email: 'lauren@actually.com',
       username: 'lauren',
-      bio: 'Logical fallacies, logical fallacies everywhere',
-      photo: 'https://media.makeameme.org/created/logical-fallacies-logical-vjzf7q.jpg',
+      bio: 'The optimist says: the glass is half full. The pessimist says: the glass is half empty. The coder says: the glass is twice as big as it needs to be.',
+      photo: 'https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http%3A%2F%2Ft0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRctAMOT4i1HbstfoaeR41sb0Fgu9Y3yxdiFGuZXpCj5Pwwld2xgw&sp=569eb363ab8f86b570d989daadb132c3&anticache=265329',
       password: 'password',
       password_confirmation: 'password'
     )
