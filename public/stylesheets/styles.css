@@ -291,3 +291,15 @@ a:hover {
 .bio {
   font-size: 1.6em;
 }
+
+/*EDIT SOURCE PAGE*/
+
+/*====================*/
+
+.sourceEditButtons {
+  display:block;
+}
+
+.sourceEditButton {
+  display:inline-block;
+}

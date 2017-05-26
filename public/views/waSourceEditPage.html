@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 col-offset-md-2">
 
       <form ng-submit="$ctrl.updateSource()">
         <div>
@@ -58,16 +58,27 @@
 
         <!-- TAGS -->
         <wa-tag-form-input tags="$ctrl.editSource.tags"></wa-tag-form-input>
-        <div class="form-group">
+        <div class="form-group sourceEditButtons ">
+
+          <span class="sourceEditButton">
           <button type="submit" class="btn btn-primary">
           Update Source
-        </button>
+         </button>
+         </span>
+
+         <span class="sourceEditButton">
+         <button ng-click="$ctrl.deleteSource()" class="btn btn-primary">
+         Delete Source
+         </button>
+         </span>
+
+         <span class="sourceEditButton">
+         <a ui-sref="sources" class="btn btn-info">
+        Cancel</a>
+         </span>
 
         </div>
       </form>
-      <button ng-click="$ctrl.deleteSource()" class="btn btn-primary">
-      Delete Source
-    </button>
 
     </div>
   </div>
