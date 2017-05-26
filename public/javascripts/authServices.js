@@ -22,6 +22,12 @@
       });
     }
 
+    this.editProfile = function(userId, user) {
+      return $http.patch(`/api/users/${userId}`, user).then((response) => {
+        return response.data;
+      })
+    }
+
     this.logout = function() {
       $window.localStorage.clear();
     }

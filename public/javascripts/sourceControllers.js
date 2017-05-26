@@ -236,7 +236,7 @@
     }
   }
 
-  function WaProfileEditController(SourceService) {
+  function WaProfileEditController(SourceService, AuthService, $state) {
     const vm = this;
 
     let userId = SourceService.getUserId(SourceService.getToken());
@@ -246,6 +246,12 @@
         vm.user = userData;
       })
     }
+
+    vm.updateProfile = function() {
+      AuthService.editProfile(vm.user.id, vm.user).then((response) => {
+        $state.go(`profile`, {id: vm.user.id});
+      })
+    }
   }
 
   function WaPontificatorController(SourceService) {
@@ -253,7 +259,6 @@
 
     vm.getSynonyms = function(word) {
       SourceService.getSynonyms(word).then((response) => {
-        console.log(response);
         let wordArray = [];
         let categoryArray = [];
         let data = response;
