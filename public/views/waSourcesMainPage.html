@@ -12,5 +12,5 @@
   <wa-sources-filter-sort sort-option="$ctrl.sortOption" sort-options="$ctrl.sortOptions" filter="$ctrl.filter" selected-tags="$ctrl.selectedTags"></wa-sources-filter-sort>
 
   <!-- remember when binding to pass in the variables/data you're passing to a new controller -->
-  <wa-source ng-repeat="source in $ctrl.sources | filter:$ctrl.filter | filterByTags:$ctrl.selectedTags | orderBy:$ctrl.sortOption.property" source="source" selected-tags="$ctrl.selectedTags"></wa-source>
+  <wa-source class="ng-cloak" ng-repeat="source in $ctrl.sources | filter:$ctrl.filter | filterByTags:$ctrl.selectedTags | orderBy:$ctrl.sortOption.property" source="source" selected-tags="$ctrl.selectedTags"></wa-source>
 </div>
