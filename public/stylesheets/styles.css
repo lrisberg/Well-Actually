@@ -64,8 +64,8 @@ a:hover {
 }
 /*GOOGLE FONT SECTION*/
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-  background-color: rgba(244, 103, 52, 0.68);
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-success:active:focus, .open>.dropdown-toggle.btn-primary {
+  background-color: rgba(244, 103, 52, 0.68) !important;
 }
 /*====================*/
 
