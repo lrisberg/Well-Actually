@@ -2,13 +2,13 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8 col-offset-md-2">
+    <div class="col-sm-12 col-md-12 col-lg-12">
 
       <form ng-submit="$ctrl.updateSource()">
         <div>
 
           <!-- TITLE -->
-          <label for="title">Title</label>
+          <label class="forms" for="title">{{$ctrl.editSource.title}}</label>
           <input
           ng-model="$ctrl.editSource.title"
           id="title"
@@ -18,7 +18,7 @@
 
         <!-- LINK -->
         <div>
-          <label for="link">Link</label>
+          <label class="forms" for="link">Link</label>
           <input
           ng-model="$ctrl.editSource.link"
           id="link"
@@ -29,7 +29,7 @@
 
         <!-- ABSTRACT -->
         <div>
-          <label for="abstract">Abstract</label>
+          <label class="forms" for="abstract">Abstract</label>
           <textarea
           ng-model="$ctrl.editSource.abstract"
           id="abstract"
@@ -39,7 +39,7 @@
 
         <!-- JOURNAL -->
         <div>
-          <label for="journal">Journal</label>
+          <label class="forms" for="journal">Journal</label>
           <input
           ng-model="$ctrl.editSource.journal"
           id="journal"
@@ -48,7 +48,7 @@
 
         <!-- NOTES -->
         <div>
-          <label for="notes">Notes</label>
+          <label class="forms" for="notes">Notes</label>
           <textarea
           ng-model="$ctrl.editSource.notes"
           id="notes"
@@ -59,23 +59,25 @@
         <!-- TAGS -->
         <wa-tag-form-input tags="$ctrl.editSource.tags"></wa-tag-form-input>
         <div class="form-group sourceEditButtons ">
+          <br>
 
-          <span class="sourceEditButton">
-          <button type="submit" class="btn btn-primary">
-          Update Source
+          <a ui-sref="sources" class="btn btn-primary cancelBtn">
+         Cancel</a>
+
+
+
+          <button type="submit" class="btn btn-primary cancelBtn">
+          Update
          </button>
-         </span>
 
-         <span class="sourceEditButton">
-         <button ng-click="$ctrl.deleteSource()" class="btn btn-primary">
+
+
+         <button ng-click="$ctrl.deleteSource()" class="btn btn-primary cancelBtn pull-right">
          Delete Source
          </button>
-         </span>
 
-         <span class="sourceEditButton">
-         <a ui-sref="sources" class="btn btn-info">
-        Cancel</a>
-         </span>
+
+
 
         </div>
       </form>
