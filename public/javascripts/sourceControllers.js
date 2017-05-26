@@ -17,6 +17,7 @@
 
   function WaSplashController() {
     const vm = this;
+
   }
 
   function WaNavController($location, AuthService, $state, SourceService) {

@@ -1,37 +1,43 @@
 <nav>
-  <div class="splashNav">
-      <div class="navbar-header navbarTop gFont2">
+    <div class="splashNav">
+        <div class="navbar-header navbarTop gFont2">
 
-          <span class="signup">
-            <a href="#" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
+            <span class="signup" id="#nav">
+            <a href="#" class="splashFormButton" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
           </span>
 
-          <span class="login pull-right">
-            <a href="#" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
+            <span class="login pull-right">
+            <a href="#" class="splashFormButton" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
           </span>
 
-      </div>
+        </div>
 
-      <div class="navbarSignup">
-          <wa-signup-form ng-if="$ctrl.toggleSignup"></wa-signup-form>
-      </div>
+        <div class="navbarSignup">
+            <wa-signup-form ng-if="$ctrl.toggleSignup"></wa-signup-form>
+        </div>
 
-      <div class="navbarLogin ">
-          <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>
-      </div>
-  </div>
+        <div class="navbarLogin">
+            <wa-login-form ng-if="$ctrl.toggleLogin"></wa-login-form>
+        </div>
+    </div>
 </nav>
 
-<div class="container">
-
-<!-- <wa-login-form></wa-login-form>
-<wa-signup-form></wa-signup-form> -->
-
-<div class="logo">
-
-  <div class="splashArrow glyphicon glyphicon-chevron-down">
-
-  </div>
+<div class="container spashLogo">
+    <div class="logo">
+    </div>
+      <a href="#aboutLink" class="glyphicon glyphicon-menu-down pull-left splashArrow"></a>
+      <a href="#aboutLink" class="glyphicon glyphicon-menu-down pull-right splashArrow"></a>
 </div>
+<div class="container fill">
+
+</div>
+<div class="container">
+  <a href="#nav" class="glyphicon glyphicon-menu-up pull-left splashArrow"></a>
+  <a href="#nav" class="glyphicon glyphicon-menu-up pull-right splashArrow"></a>
+
+  <p class="about text-center" id="aboutLink"> We have all been in arguments with people pulling facts out of their friends' mouths.<br> Well, Actually is here to help you squash misinformation. <br>We provide you with a platform to store your favorite peer reviewed articles and access them quickly in the middle of an argument.<br>You even have the ability to track how many times an article has won arguments and caused you to lose friends. We know that if you have found us,<br> you value truth above all else.<br>
+Argue on. </p>
+</div>
+<div class="container fill">
 
 </div>
