@@ -2,32 +2,32 @@
 
 <div class="container profileEdit">
     <div class="row">
-        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-offset-md-3">
+        <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <h1>Edit Profile</h1>
+            <h1 class="text-center">Edit Profile</h1>
 
-            <div class="center">
+            <div class="text-center">
                 <img src="{{$ctrl.user.photo}}" alt="user image" class="menuPhoto text-center">
             </div>
 
             <form ng-submit="$ctrl.updateProfile()">
                 <div>
-                    <label for="photo">Photo URL</label>
+                    <label class="forms" for="photo">Photo URL</label>
                     <input ng-model="$ctrl.user.photo" id="photo" class="form-control col-xl-6 offset-xl-3">
                 </div>
 
                 <div>
-                    <label for="username">Username</label>
+                    <label class="forms" for="username">Username</label>
                     <input ng-model="$ctrl.user.username" id="username" class="form-control">
                 </div>
 
                 <div>
-                    <label for="email">Email</label>
+                    <label class="forms" for="email">Email</label>
                     <input ng-model="$ctrl.user.email" id="email" class="form-control">
                 </div>
 
                 <div>
-                    <label for="bio">Bio</label>
+                    <label class="forms" for="bio">Bio</label>
                     <textarea ng-model="$ctrl.user.bio" class="form-control"></textarea>
                 </div>
 
@@ -37,9 +37,9 @@
                 </div> -->
                 <div class="profileEditButtons">
                   <span class="form-group ">
-                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                    <button type="submit" class="btn btn-primary cancelBtn">Update</button>
                   </span>
-                  <span class="form-group">  <a ui-sref="sources" class="btn btn-info">Cancel</a></span>
+                  <span class="form-group">  <a ui-sref="sources" class="btn btn-primary cancelBtn pull-right" data-toggle="tooltip" title="cancel">X</a></span>
                 </div>
 
 
