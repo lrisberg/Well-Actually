@@ -8,7 +8,7 @@
 
     # ruby encoding: utf-8
     Source.create(
-      user_id: 2,
+      user_id: 5,
       title: 'Effects of black current anthocyanoside intake on dark adaptation and VDT work-induced transient refractive alteration in healthy humans.',
       link: 'https://www.ncbi.nlm.nih.gov/pubmed/11134978',
       journal: 'Altern Med Rev',
@@ -54,7 +54,7 @@
       CONCLUSIONS:\n
       Limited evidence was found to support a positive relationship between occupational sitting and health risks. The heterogeneity of study designs, measures, and findings makes it difficult to draw definitive conclusions at this time.',
       notes: 'Being a programmer is an occupational hazard.',
-      wins: 2,
+      wins: 0,
       friends_lost: 1,
       tags: ["health", "sitting", "standing", "cardiovascular", "diabetes", "cancer"])
     Source.create(
@@ -73,8 +73,8 @@
       CONCLUSIONS:\n
       Recreational sitting, as reflected by television/screen viewing time, is related to raised mortality and CVD risk regardless of physical activity participation. Inflammatory and metabolic risk factors partly explain this relationship.',
       notes: 'Being a programmer is definitely an occupational hazard.',
-      wins: 2,
-      friends_lost: 0,
+      wins: 1,
+      friends_lost: 3,
       tags: ["health", "sitting", "standing", "CVD", "diabetes", "cancer", "screen time"])
     Source.create(
       user_id: 2,
@@ -86,8 +86,8 @@
       Methods and Results— Television viewing time in relation to subsequent all-cause, CVD, and cancer mortality (median follow-up, 6.6 years) was examined among 8800 adults ≥25 years of age in the Australian Diabetes, Obesity and Lifestyle Study (AusDiab). During 58 087 person-years of follow-up, there were 284 deaths (87 CVD deaths, 125 cancer deaths). After adjustment for age, sex, waist circumference, and exercise, the hazard ratios for each 1-hour increment in television viewing time per day were 1.11 (95% confidence interval [CI], 1.03 to 1.20) for all-cause mortality, 1.18 (95% CI, 1.03 to 1.35) for CVD mortality, and 1.09 (95% CI, 0.96 to 1.23) for cancer mortality. Compared with a television viewing time of <2 h/d, the fully adjusted hazard ratios for all-cause mortality were 1.13 (95% CI, 0.87 to 1.36) for ≥2 to <4 h/d and 1.46 (95% CI, 1.04 to 2.05) for ≥4 h/d. For CVD mortality, corresponding hazard ratios were 1.19 (95% CI, 0.72 to 1.99) and 1.80 (95% CI, 1.00 to 3.25). The associations with both cancer mortality and non-CVD/noncancer mortality were not significant.\n
 
       Conclusions— Television viewing time was associated with increased risk of all-cause and CVD mortality. In addition to the promotion of exercise, chronic disease prevention strategies could focus on reducing sitting time, particularly prolonged television viewing.',
-      wins: 5,
-      friends_lost: 1,
+      wins: 1,
+      friends_lost: 4,
       tags: ["health", "sitting", "standing", "CVD", "diabetes", "cancer", "screen time"])
     Source.create(
       user_id: 2,
@@ -95,8 +95,8 @@
       link: 'http://www.tandfonline.com/doi/abs/10.1080/21577323.2016.1183534',
       journal: 'IIE Transactions on Occupational Ergonomics and Human Factors',
       abstract: 'Stand-capable desks have been shown to successfully reduce sedentary behavior in the modern office, but whether their utilization improves cognitive productivity is not known. We compared productivity between stand-capable desk users and traditional seated desk users in a call center environment. Data were collected daily over a continuous 6-month period. We found that increased stand-capable desk use is a likely contributor to increased productivity over traditional seated desk use. These findings indicate that use of stand-capable desks as ergonomic interventions to improve physical health among employees may also positively impact their work productivity.',
-      wins: 6,
-      friends_lost: 1,
+      wins: 3,
+      friends_lost: 2,
       tags: ["health", "sitting", "standing", "standing desks", "productivity", "workplace"])
     User.create(
       email: 'admin@wa.com',
@@ -131,7 +131,7 @@
       email: 'erica@actually.com',
       username: 'erica',
       bio: 'The optimist says: the glass is half full. The pessimist says: the glass is half empty. The coder says: the glass is twice as big as it needs to be.',
-      photo: '',
+      photo: 'https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http%3A%2F%2Ft0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRctAMOT4i1HbstfoaeR41sb0Fgu9Y3yxdiFGuZXpCj5Pwwld2xgw&sp=569eb363ab8f86b570d989daadb132c3&anticache=265329',
       password: 'password',
       password_confirmation: 'password'
     )
