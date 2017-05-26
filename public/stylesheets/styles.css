@@ -386,3 +386,11 @@ a:hover {
 .gradCap {
   font-size: 2em;
 }
+
+.forms {
+  font-size: 2em;
+}
+
+.cancelBtn {
+  color: white !important;
+}

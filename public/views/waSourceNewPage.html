@@ -1,13 +1,14 @@
 <wa-nav></wa-nav>
-<div class="container">
   <div class="row">
-    <div class="col-md-8">
+<div class="container">
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
 
        <form ng-submit="$ctrl.createSource()">
 
         <!-- TITLE -->
         <div>
-          <label for="title">Title</label>
+          <label class="forms" for="title">Title</label>
           <input
            ng-model="$ctrl.newSource.title"
            id="title"
@@ -17,7 +18,7 @@
 
         <!-- LINK -->
         <div>
-          <label for="link">Link</label>
+          <label class="forms" for="link">Link</label>
           <input
           ng-model="$ctrl.newSource.link"
           id="link"
@@ -28,7 +29,7 @@
 
         <!-- ABSTRACT -->
         <div>
-          <label for="abstract">Abstract</label>
+          <label class="forms" for="abstract">Abstract</label>
           <textarea
           ng-model="$ctrl.newSource.abstract"
           id="abstract"
@@ -38,7 +39,7 @@
 
         <!-- JOURNAL -->
         <div>
-          <label for="journal">Journal</label>
+          <label class="forms" for="journal">Journal</label>
           <input
           ng-model="$ctrl.newSource.journal"
           id="journal"
@@ -47,7 +48,7 @@
 
         <!-- NOTES -->
         <div>
-          <label for="notes">Notes</label>
+          <label class="forms" for="notes">Notes</label>
           <textarea
           ng-model="$ctrl.newSource.notes"
           id="notes"
@@ -57,14 +58,14 @@
 
         <!-- TAGS -->
         <wa-tag-form-input tags="$ctrl.newSource.tags"></wa-tag-form-input>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">
+        <!-- <div class="form-group"> -->
+          <button type="submit" class="btn btn-primary pull-right">
           Create Source
         </button>
-        </div>
+        <!-- </div> -->
 
       </form>
-      <a ui-sref="sources" class="btn btn-info">Cancel</a>
+      <a ui-sref="sources" class="btn btn-primary pull-right cancelBtn" data-toggle="tooltip" title="cancel">x</a>
 
 
     </div>
