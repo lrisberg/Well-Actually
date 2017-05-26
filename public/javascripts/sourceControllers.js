@@ -111,7 +111,7 @@
       }
     ];
 
-    vm.sortOption = vm.sortOptions[2]
+    vm.sortOption = vm.sortOptions[0]
 
   }
 
