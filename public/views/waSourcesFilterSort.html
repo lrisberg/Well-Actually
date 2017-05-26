@@ -9,7 +9,7 @@
       Sort By {{$ctrl.sortOption.display}}<span class="caret"></span>
       </a>
     <ul class="dropdown-menu">
-      <li ng-repeat="option in $ctrl.sortOptions" ng-click="$ctrl.sortOption = option"><a href="#">Sort By {{option.display}}</a></li>
+      <li ng-repeat="option in $ctrl.sortOptions" ng-click="$ctrl.sortOption = option" class="dropdown"><a href="#">Sort By {{option.display}}</a></li>
     </ul>
   </li>
 </ul>

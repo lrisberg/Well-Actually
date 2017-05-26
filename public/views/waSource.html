@@ -3,21 +3,21 @@
 <div class="row">
     <div class="col-md-12">
 
-        <div class="well">
+        <div class="well well-space">
 
             <div class="media-left">
                 <img class="media-object">
             </div>
 
             <div class="media-body">
-                <h4 class="media-heading">
+                <h4 class="media-heading title">
                   <a ui-sref="sourceShow({ id: $ctrl.source.id })">{{$ctrl.source.title}}</a>
 
                   |
                   <a ui-sref="sourceEdit({ id: $ctrl.source.id })">edit</a>
                 </h4>
 
-                <a href="{{$ctrl.source.link}}">Go to the Source!</a>
+                <a href="{{$ctrl.source.link}}" class="text-center">Go to the Source!</a>
 
                 <div class="abstract">
                   <p ng-repeat="paragraph in $ctrl.abstractArray track by $index">{{paragraph}}</p>
