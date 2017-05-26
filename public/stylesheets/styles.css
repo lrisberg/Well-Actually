@@ -280,6 +280,15 @@ a:hover {
   font-size: 1rgba(244, 103, 52, 1)em;
   box-shadow: 10px 5px 5px rgba(159, 143, 137, 0.98);
 }
+
+.tag {
+  background-color: rgba(194, 59, 10, 1);
+  margin: 2px;
+  font-size: 1rgba(244, 103, 52, 1)em;
+  box-shadow: 10px 5px 5px rgba(159, 143, 137, 0.98);
+  font-size: 1em;
+}
+
 /*.media-body {
   margin: auto;
 }*/
