@@ -59,7 +59,7 @@
                     <li>Friends Lost: {{$ctrl.friendsLost}}</li>
                     <hr>
                     <li><a ui-sref="sources" ng-click="$ctrl.retractMenu()">Dashboard</a></li>
-                    <li><a ui-sref="profile" ng-click="$ctrl.retractMenu()">Profile</a></li>
+                    <li><a ui-sref="profile({ id: $ctrl.user.id })" ng-click="$ctrl.retractMenu()">Profile</a></li>
                     <li><a ui-sref="splash" ng-click="$ctrl.retractMenu()">About</a></li>
                     <hr>
                     <li><a ng-click="$ctrl.logout()" id="logoutHover">Logout</a></li>

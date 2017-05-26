@@ -22,9 +22,13 @@
   function WaNavController($location, AuthService, $state, SourceService) {
     const vm = this;
 
-    vm.$onInit = function() {
+    let userId = SourceService.getUserId(SourceService.getToken());
 
-      let userId = SourceService.getUserId(SourceService.getToken());
+    vm.user = {
+      id: userId
+    }
+
+    vm.$onInit = function() {
 
       SourceService.getUser(userId).then((userData) => {
         vm.userPhoto = userData.photo
@@ -151,8 +155,7 @@
       SourceService.getSource($stateParams.id).then((response) => {
         if (response.user_id !== userId) {
           $state.go('sources');
-        }
-        else {
+        } else {
           vm.source = response;
         }
       })
@@ -181,8 +184,7 @@
       SourceService.getSource($stateParams.id).then((response) => {
         if (response.user_id !== userId) {
           $state.go('sources');
-        }
-        else {
+        } else {
           vm.editSource = response;
         }
       })

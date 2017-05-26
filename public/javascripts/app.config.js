@@ -37,8 +37,7 @@
       })
       .state({
         name: 'profile',
-        //add id later
-        url: '/profile',
+        url: '/profile/:id',
         component: 'waProfile'
       })
       .state({
