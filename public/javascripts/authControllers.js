@@ -17,6 +17,7 @@
       vm.error = false;
       AuthService.login(vm.loginDetails).then((token) => {
         AuthService.setCurrentUser(token);
+        delete vm.loginDetails
         $state.go('sources')
       }, (errorResponse) => {
         vm.error = true;
@@ -39,6 +40,7 @@
       AuthService.signup(JSON.stringify(submitUser)).then((response) => {
         AuthService.login(vm.signupDetails).then((token) => {
           AuthService.setCurrentUser(token);
+          delete vm.signupDetails
           $state.go('sources')
         })
       });
