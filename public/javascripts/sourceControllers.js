@@ -32,12 +32,15 @@
 
       SourceService.getSources().then((response) => {
         let wins = 0;
+        let lostFriends = 0;
         for (let i = 0; i < response.length; i++) {
           if (response[i].user_id === userId) {
             wins += response[i].wins
+            lostFriends += response[i].friends_lost
           }
         }
         vm.wins = wins;
+        vm.friendsLost = lostFriends
       });
     }
 
