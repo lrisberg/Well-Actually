@@ -1,12 +1,12 @@
 <wa-nav></wa-nav>
 
-<div class="container">
+<div class="container character">
 
-    <div class="row">
+  <div class="row">
 
-        <div class="col-md-10">
+        <div class="col-xs-12 col-md-12 col-lg-12">
 
-            <div class="well">
+            <div class="well well-space  singleSource">
 
                 <div class="media-left">
                     <img class="media-object">
@@ -14,27 +14,28 @@
 
                 <div class="media-body">
 
-                    <h4 class="media-heading">
-                      <a ui-sref="#">{{$ctrl.source.title}}</a>
-                        |
-                      <a ui-sref="sourceEdit({ id: $ctrl.source.id })">edit</a>
-                    </h4>
+                  <h4 class="media-heading title">
+                    <a ui-sref="sourceShow({ id: $ctrl.source.id })">{{$ctrl.source.title}}</a>
 
-                    <p><a href="{{$ctrl.source.link}}">Go to the Source!</a></p>
+                    |
+                    <a ui-sref="sourceEdit({ id: $ctrl.source.id })" class="glyphicon glyphicon-pencil icon" data-toggle="tooltip" title="edit source"></a> |
 
-                    <p>Argument Wins: <strong>{{$ctrl.source.wins}} </strong><a ng-click="$ctrl.addWin()"><i class="glyphicon glyphicon-arrow-up"></i></a></p>
 
-                    <p>Friends Lost: <strong>{{$ctrl.source.friends_lost}} </strong><a ng-click="$ctrl.loseFriend()"><i class="glyphicon glyphicon-arrow-up"></i></a></p>
+                  <a href="{{$ctrl.source.link}}" class="glyphicon glyphicon-globe icon" data-toggle="tooltip" title="go to source"></a>
+    </h4>
+
+                    <p>Argument Wins: <strong>{{$ctrl.source.wins}} </strong><a ng-click="$ctrl.addWin()"><i class="fa fa-trophy trophy" aria-hidden="true"></i></a></p>
+
+                    <p>Friends Lost: <strong>{{$ctrl.source.friends_lost}} </strong><a ng-click="$ctrl.loseFriend()"><i class="fa fa-users" aria-hidden="true"></i></a></p>
 
                     <p class="abstract">
                         {{$ctrl.source.abstract}}
                     </p>
                 </div>
             </div>
-
-            <div class="col-md-2">
-                <wa-pontificator></wa-pontificator>
-            </div>
         </div>
+            <wa-pontificator></wa-pontificator>
+
+
     </div>
 </div>

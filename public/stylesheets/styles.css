@@ -55,6 +55,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+  color: white;
 }
 
 #logoutHover:hover {
@@ -372,4 +373,16 @@ a:hover {
 .icon {
   margin-left: .5em;
   margin-right: .5em;
+}
+
+.singleSource{
+  margin-top: 3em;
+}
+
+.pontificate{
+  background-color: rgba(244, 103, 52, 1);
+}
+
+.gradCap {
+  font-size: 2em;
 }

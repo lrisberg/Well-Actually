@@ -1,10 +1,19 @@
-<div>
-  <p><input ng-model="$ctrl.word" type="text">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
 
-  <!-- <div class="text-center"> -->
-    <a class="btn btn-info text-center" ng-click="$ctrl.getSynonyms($ctrl.word)">Pontificate!</a>
-    </p>
-  <!-- </div> -->
-  <!-- <p><span>{{$ctrl.categories[0]}}</span></p> -->
-  <p ng-repeat="word in $ctrl.synonyms track by $index">{{word}} </p>
+            <div class="well well-space  singleSource">
+                <p><input ng-model="$ctrl.word" type="text">
+
+                    <!-- <div class="text-center"> -->
+                    <a class="btn btn-primary text-center pontificate" ng-click="$ctrl.getSynonyms($ctrl.word)">Pontificate!</a>
+                    <i class="fa fa-graduation-cap gradCap pull-right" aria-hidden="true" data-toggle="tooltip" title="you're smart"></i>
+                </p>
+
+                <div class="media-body">
+                    <span ng-repeat="word in $ctrl.synonyms track by $index" class="abstract">{{word}} <i class="fa fa-lightbulb-o" aria-hidden="true"></i> </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
