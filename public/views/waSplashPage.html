@@ -3,11 +3,12 @@
         <div class="navbar-header navbarTop gFont2">
 
             <span class="signup" id="#nav">
-            <a href="#" class="splashFormButton" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup">Sign Up</a>
+            <a href="#" class="splashFormButton" ng-click="$ctrl.toggleSignup=!$ctrl.toggleSignup; $ctrl.toggleLogin=false">Sign Up</a>
           </span>
 
             <span class="login pull-right">
-            <a href="#" class="splashFormButton" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin">Login</a>
+            <a href="#" class="splashFormButton" ng-click="$ctrl.toggleLogin=!$ctrl.toggleLogin;
+            $ctrl.toggleSignup=false">Login</a>
           </span>
 
         </div>
