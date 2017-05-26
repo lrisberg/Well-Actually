@@ -14,10 +14,13 @@
     // }
 
     vm.submitLogin = function() {
+      vm.error = false;
       AuthService.login(vm.loginDetails).then((token) => {
         AuthService.setCurrentUser(token);
         $state.go('sources')
-      })
+      }, (errorResponse) => {
+        vm.error = true;
+      });
     }
   }
 
