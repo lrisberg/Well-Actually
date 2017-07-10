@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ever feel like sometimes your friends are just wrong? Now you have the power to prove it, anytime, anywhere. Well Actually provides you with a platform to store your favorite peer reviewed articles and access them quickly in the middle of an argument. Track argument wins and friends lost. Argue on!
 
-Things you may want to cover:
+To use the app, go to this link and sign up:
 
-* Ruby version
+well-actually.herokuapp.com
 
-* System dependencies
+Then you'll be able to add new scientific studies using the 'Add Source' button and add tags to organize your sources.
 
-* Configuration
+Technologies used to create this project:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+AngularJS
+Ruby on Rails
+PostgreSQL
+HTML & CSS
+Bootstrap
