@@ -1,7 +1,7 @@
 class Api::SourcesController < ApplicationController
   # this protects api routes
-  # before_action :authenticate_request
-  skip_before_action :authenticate_request
+  before_action :authenticate_request
+  # skip_before_action :authenticate_request
 
   def index
     @sources = Source.all

@@ -10,6 +10,7 @@ class ApplicationController < ActionController::API
   private
 
   def authenticate_request
+    # @current_user is an instance variable availabe to all methods in this class
     @current_user = AuthorizeApiRequest.call(request.headers).result
     render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
